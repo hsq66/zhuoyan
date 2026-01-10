@@ -1,159 +1,133 @@
-######################## default configuration ####################
-baseURL = "https://hsq66.github.io/zhuoyan/"
-title = "卓炎科技 - 人工智能·智慧教育·健康生活"
-theme = "dot-hugo"
-timeZone = "Asia/Shanghai"
-pagination.pagerSize = 10
-summaryLength = 20
-disableLanguages = ["fr"]
-hasCJKLanguage = true
-defaultContentLanguage = 'zh'
-defaultContentLanguageInSubdir = false
+baseURL = "https://zhuoyan.hn.cn/"
+languageCode = "zh-CN"
+title = "海南卓炎科技有限责任公司"
+# theme = "dot-hugo"  # 暂时禁用主题，使用Hugo默认布局
+defaultContentLanguage = "zh"
+enableRobotsTXT = true
+enableGitInfo = false
 
-########################## Permalinks ############################
-[permalinks.page]
-"pages" = "/:slugorcontentbasename/"
+[pagination]
+  pagerSize = 6
 
-########################### Services #############################
-[services]
-[services.googleAnalytics]
-ID = '' # 添加你的 Google Analytics ID
+[params]
+  description = "智慧启航，未来已来！体验我们的智能教育与通信服务，让学习无界，沟通无限。"
+  author = "卓炎科技"
+  logo = "/images/logo.png"
+  logo_width = "156px"
+  logo_height = "58px"
+  
+  # 公司信息
+  company_name = "海南卓炎科技有限责任公司"
+  company_address = "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室"
+  company_phone = "18923719468"
+  company_mobile = "18923719468"
+  company_email = "axel@long.kim"
+  company_qq = "45451202"
+  
+  # 分支机构
+  shenzhen_hq = "广东省深圳市龙岗区龙城街道办龙平西路137号祥情世纪城市广场二楼"
+  shenzhen_rd = "广东省深圳市南山区粤海街道海天一路11号软件产业基地5栋A座4栋433"
+  
+  # SEO
+  keywords = "AI英语,智能学习,鼎英语,智慧学习手机,OLED护眼台灯,卫星通信,数字化咨询"
+  
+  # 社交媒体
+  [params.social]
+    qq = "45451202"
+    wechat = "/images/wechat-qr.jpg"
 
-############################# Modules ############################
-[module]
-[[module.mounts]]
-source = "dot-hugo/assets"
-target = "assets"
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+    
+  [[menu.main]]
+    name = "关于我们"
+    url = "/about/"
+    weight = 2
+    
+  [[menu.main]]
+    name = "产品中心"
+    url = "/services/"
+    weight = 3
+    hasChildren = true
+    
+  [[menu.main]]
+    name = "鼎英语"
+    parent = "产品中心"
+    url = "/services/ai-english/"
+    weight = 1
+    
+  [[menu.main]]
+    name = "智慧学习手机"
+    parent = "产品中心"
+    url = "/services/smart-phone/"
+    weight = 2
+    
+  [[menu.main]]
+    name = "OLED护眼台灯"
+    parent = "产品中心"
+    url = "/services/oled-lamp/"
+    weight = 3
+    
+  [[menu.main]]
+    name = "卫星通信"
+    parent = "产品中心"
+    url = "/services/satellite/"
+    weight = 4
+    
+  [[menu.main]]
+    name = "数字化咨询"
+    parent = "产品中心"
+    url = "/services/digital/"
+    weight = 5
+    
+  [[menu.main]]
+    name = "荣誉资质"
+    url = "/honors/"
+    weight = 4
+    
+  [[menu.main]]
+    name = "成功案例"
+    url = "/cases/"
+    weight = 5
+    
+  [[menu.main]]
+    name = "新闻资讯"
+    url = "/news/"
+    weight = 6
+    hasChildren = true
+    
+  [[menu.main]]
+    name = "公司新闻"
+    parent = "新闻资讯"
+    url = "/news/company/"
+    weight = 1
+    
+  [[menu.main]]
+    name = "行业新闻"
+    parent = "新闻资讯"
+    url = "/news/industry/"
+    weight = 2
+    
+  [[menu.main]]
+    name = "常见问题"
+    parent = "新闻资讯"
+    url = "/news/faq/"
+    weight = 3
+    
+  [[menu.main]]
+    name = "联系我们"
+    url = "/contact/"
+    weight = 7
 
-[[module.mounts]]
-source = "assets"
-target = "assets"
-
-[[module.mounts]]
-source = "dot-hugo/layouts"
-target = "layouts"
-
-[[module.mounts]]
-source = "layouts"
-target = "layouts"
-
-[[module.mounts]]
-source = "dot-hugo/static"
-target = "static"
-
-[[module.mounts]]
-source = "static"
-target = "static"
-
-[[module.mounts]]
-source = "content"
-target = "content"
-
-[[module.mounts]]
-source = "hugo_stats.json"
-target = "assets/watching/hugo_stats.json"
-
-############################# Build ##############################
-[build]
-writeStats = true
-noJSConfigInAssets = false
-useResourceCacheWhen = 'fallback'
-[build.buildStats]
-enable = true
-[[build.cachebusters]]
-source = 'assets/watching/hugo_stats\.json'
-target = 'style\.css'
-[[build.cachebusters]]
-source = '(postcss)\.config\.js'
-target = 'css'
-[[build.cachebusters]]
-source = 'assets/.*\.(js|ts|jsx|tsx)'
-target = 'js'
-[[build.cachebusters]]
-source = 'assets/.*\.(css|scss|sass)'
-target = 'css'
-[[build.cachebusters]]
-source = 'data/.*\.(.*)$'
-target = 'css'
-[[build.cachebusters]]
-source = 'assets/.*\.(.*)$'
-target = '$1'
-
-############################# Outputs ############################
-[outputs]
-home = ["HTML", "RSS", "SearchIndex"]
-
-############################# Imaging ##############################
-[imaging]
-quality = 90
-
-############################# Caches ###############################
-[caches]
-[caches.images]
-dir = ":resourceDir/_gen"
-maxAge = "720h"
-
-[caches.assets]
-dir = ":resourceDir/_gen"
-maxAge = "720h"
-
-############################# Markup ###############################
 [markup]
-[markup.goldmark.renderer]
-unsafe = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
 
-[markup.highlight]
-style = 'monokai'
-
-[markup.tableOfContents]
-startLevel = 2
-endLevel = 5
-ordered = true
-
-########################### Output Format ##########################
-[outputFormats.SearchIndex]
-mediaType = "application/json"
-baseName = "searchindex"
-isPlainText = true
-notAlternative = true
-
-######################### site variables ##############################
-[params.variables]
-color_primary = "#02007e"
-body_color = "#f9f9f9"
-text_color = "#636363"
-text_dark = "#242738"
-text_light = "#f8f9fa"
-black = "#000"
-white = "#fff"
-dark = "#222"
-light = "#eee"
-font_size = "16px"
-font_scale = "1.17"
-font_primary = "Noto+Sans+SC:wght@300;400;700"
-font_primary_type = "sans-serif"
-font_secondary = ""
-font_secondary_type = ""
-font_icon = "Font Awesome 6 Free"
-
-############################# Plugins ##############################
-[[params.plugins.css]]
-link = "plugins/themify-icons/icons.css"
-
-[[params.plugins.js]]
-link = "js/search.js"
-
-[[params.plugins.js]]
-link = "plugins/webfont/webfont-loader-2.js"
-
-[[params.plugins.js]]
-link = "plugins/glightbox.js"
-
-[[params.plugins.js]]
-link = "plugins/youtube-lite.js"
-
-[[params.plugins.js]]
-link = "plugins/cookie.js"
-
-[[params.plugins.js]]
-link = "plugins/lazy-loader.js"
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

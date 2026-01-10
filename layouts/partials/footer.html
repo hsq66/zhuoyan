@@ -1,0 +1,23 @@
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <p>电话：{{ .Site.Params.company_phone }}</p>
+                <p>邮箱：{{ .Site.Params.company_email }}</p>
+                <p>地址：{{ .Site.Params.company_address }}</p>
+            </div>
+            <div class="footer-section">
+                <h3>快捷链接</h3>
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ now.Year }} {{ .Site.Title }}. 保留所有权利。</p>
+        </div>
+    </div>
+</footer>

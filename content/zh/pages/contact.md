@@ -1,110 +1,49 @@
 ---
 title: "联系我们"
-description: "与卓炎科技取得联系"
+description: "提升英语，轻松掌握！「AI英语提分」助您高效学习，智能搜索，精准匹配学习需求。"
+date: 2024-01-10
 draft: false
 ---
 
-## 联系卓炎科技
+# 联系我们
 
-欢迎与我们联系，我们期待与您合作，共创美好未来。
+官方网站：[www.zhuoyan.tech](http://www.zhuoyan.tech/)
 
-### 联系方式
+技术交流：**18923719468**
 
-**公司名称**: 卓炎科技有限公司
+## 我们的理念
 
-**服务热线**: 400-xxx-xxxx
+我们一直秉承大道至简分享便可改变世界的理念，坚持做最简约舒适的光环境产品，切实践行低碳环保！
 
-**商务合作**: business@zhuoyan.com
+您的每一份帮助都将支持卓炎科技做的更好，走的更远！
 
-**技术支持**: support@zhuoyan.com
+我们一直在坚持不懈地努力，并尽可能让世界充满健康的光、自然的光，您的帮助将使我们更有动力和信心^_^！
 
-**人才招聘**: hr@zhuoyan.com
+同时与时代的热浪、信息化的浪潮，不断打造我们新时代的咨询与信息化管理的坚实的道路！
 
-**工作时间**: 周一至周五 9:00-18:00（北京时间）
+## 您的每一份支持将有利于：
 
-### 办公地址
+- 深入核心的开发、做丰富的应用；
+- 设计更爽的用户体验；
+- 吸引更多的开发者和应用开发者；
+- 奖励更多优秀贡献者。
 
-**总部地址**: 中国·河南省·郑州市
+世界因你我携手，而蓝天变得更蓝，精彩绚丽更长远！~~
 
-### 在线咨询
+## 公司运营分支机构
 
-<form action="#" method="POST">
-  <div class="form-group">
-    <label for="name">姓名 *</label>
-    <input type="text" class="form-control" id="name" name="name" required>
-  </div>
-  
-  <div class="form-group">
-    <label for="company">公司名称</label>
-    <input type="text" class="form-control" id="company" name="company">
-  </div>
-  
-  <div class="form-group">
-    <label for="email">邮箱 *</label>
-    <input type="email" class="form-control" id="email" name="email" required>
-  </div>
-  
-  <div class="form-group">
-    <label for="phone">联系电话</label>
-    <input type="tel" class="form-control" id="phone" name="phone">
-  </div>
-  
-  <div class="form-group">
-    <label for="service">咨询服务</label>
-    <select class="form-control" id="service" name="service">
-      <option value="">请选择</option>
-      <option value="ai">人工智能服务</option>
-      <option value="education">智慧教育解决方案</option>
-      <option value="health">健康生活服务</option>
-      <option value="consulting">咨询服务</option>
-      <option value="other">其他</option>
-    </select>
-  </div>
-  
-  <div class="form-group">
-    <label for="message">留言内容 *</label>
-    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">提交咨询</button>
-</form>
+**深圳总部：**  
+广东省深圳市龙岗区龙城街道办龙平西路137号祥情世纪城市广场二楼
 
-### 社交媒体
+**市场运营：**  
+海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室
 
-关注我们，获取最新动态：
-
-- **微信公众号**: 卓炎科技
-- **官方微博**: @卓炎科技
-- **LinkedIn**: Zhuoyan Technology
-- **GitHub**: https://github.com/hsq66
-
-### 商务合作
-
-如果您对以下合作感兴趣，欢迎联系我们：
-
-- 技术合作与研发
-- 产品代理与分销
-- 战略合作伙伴
-- 投资与融资
-
-### 人才招聘
-
-卓炎科技诚邀优秀人才加入：
-
-- AI 算法工程师
-- 软件开发工程师
-- 产品经理
-- 市场营销专员
-- 客户服务专员
-
-详情请发送简历至：hr@zhuoyan.com
-
-### 媒体合作
-
-媒体采访、新闻发布等事宜，请联系：
-
-**邮箱**: media@zhuoyan.com
+**深圳研发：**  
+广东省深圳市南山区粤海街道海天一路11号软件产业基地5栋A座4栋433
 
 ---
 
-**卓炎科技期待与您携手，共创智慧未来！**
+**联系方式：**
+- 电话：18923719468
+- 邮箱：axel@long.kim
+- QQ：45451202

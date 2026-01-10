@@ -1,0 +1,6 @@
+{{/* Search Index */}}
+{{ if .Site.Params.search.enable }}
+<script>
+  var indexURL = {{ "index.json" | absURL }};
+</script>
+{{ end }}

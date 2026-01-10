@@ -1,0 +1,4 @@
+{{/* Custom scripts */}}
+{{ with .Site.Params.custom_script }}
+{{ . | safeHTML }}
+{{ end }}

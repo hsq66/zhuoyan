@@ -1,0 +1,13 @@
+[
+  {
+    "id": 2,
+    "name": "welcome",
+    "value": "卓炎科技欢迎您，我们将竭诚为您服务！",
+    "type": "1",
+    "description": "顶部欢迎",
+    "create_user": "admin",
+    "update_user": "admin",
+    "create_time": "2023-06-11 10:17:56",
+    "update_time": " 2024-08-22 15:40:36"
+  }
+]
