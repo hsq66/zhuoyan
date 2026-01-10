@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 baseURL = "https://hsq66.github.io/zhuoyan/"
-title = "卓炎科技是一家立足于人工智能、智慧教育、健康生活，致力于让年轻一代享受学习成长与智慧规划的科技型创新与咨询服务公司"
+title = "卓研 - 知识库与支持中心"
 theme = "dot-hugo"
 timeZone = "Asia/Shanghai"
 pagination.pagerSize = 10
