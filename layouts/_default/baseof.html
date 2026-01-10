@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta name="keywords" content="{{ with .Params.keywords }}{{ . }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
-    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
+<meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else }}{{ .Site.Params.keywords }}{{ end }}"/>
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/modern-enhancements.css" | relURL }}">
+<script type="text/javascript" src="{{ "js/jquery-1.5.1.min.js" | relURL }}"></script>
+<script type="text/javascript" src="{{ "js/jquery.js" | relURL }}"></script>
 </head>
 <body>
-    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-    
-    <main>
-        {{ block "main" . }}{{ end }}
-    </main>
-    
-    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+<script type="text/javascript" src="{{ "js/jquery.js" | relURL }}"></script>
+{{ partial "header.html" . }}
+
+{{ block "main" . }}{{ end }}
+
+<div class="clear"></div>
+{{ partial "footer.html" . }}
 </body>
 </html>

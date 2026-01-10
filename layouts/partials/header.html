@@ -1,12 +1,24 @@
-<header>
-    <nav class="navbar">
-        <div class="container">
-            <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
-            <ul class="nav-menu">
-                {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                {{ end }}
-            </ul>
-        </div>
-    </nav>
-</header>
+<div class="top">
+ <div class="main">
+ <div class="fl">{{ .Site.Params.welcome | default "欢迎访问海南卓炎科技有限责任公司官网！" }}</div>
+ <div class="fr"><a href="/about/">关于我们</a> | <a href="/contact/">联系我们</a></div>
+ </div>
+</div>
+<div class="head">
+ <div class="main">
+ <div class="logo" style="width: 576px;height: 133px;background: url({{ "images/logo.png" | relURL }}) no-repeat;float: left"><a href="{{ .Site.BaseURL }}"></a></div>
+ <div class="top_tel"></div>
+ </div>
+</div>
+<div class="menu">
+ <ul>
+ <li{{ if .IsHome }} class="on"{{ end }}><a href="{{ .Site.BaseURL }}">卓炎科技</a></li>
+ <li{{ if eq .Section "about" }} class="on"{{ end }}><a href="/about/">关于我们</a></li>
+ <li{{ if eq .Section "products" }} class="on"{{ end }}><a href="/products/">鼎英语</a></li>
+ <li{{ if eq .Section "devices" }} class="on"{{ end }}><a href="/devices/">智慧学习手机</a></li>
+ <li{{ if eq .Section "lighting" }} class="on"{{ end }}><a href="/lighting/">OLED护眼台灯</a></li>
+ <li{{ if eq .Section "honors" }} class="on"{{ end }}><a href="/honors/">荣誉资质</a></li>
+ <li{{ if eq .Section "cases" }} class="on"{{ end }}><a href="/cases/">成功案例</a></li>
+ <li{{ if eq .Section "news" }} class="on"{{ end }}><a href="/news/">新闻动态</a></li>
+ </ul>
+</div>

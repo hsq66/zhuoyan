@@ -1,20 +1,50 @@
 {{ define "main" }}
-<div class="container">
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}
-    <div class="content">
-        {{ . }}
-    </div>
-    {{ end }}
-    
-    {{ range .Pages }}
-    <article class="summary">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        {{ with .Description }}
-        <p>{{ . }}</p>
-        {{ end }}
-        <p class="meta">{{ .Date.Format "2006-01-02" }}</p>
-    </article>
-    {{ end }}
+<div id="flash1"></div>
+
+<div class="weizhi">
+ <div class="main">
+ <div class="position">您的位置：<a href="{{ .Site.BaseURL }}">首页</a> >> {{ .Title }}</div>
+ </div>
 </div>
+
+<div class="main">
+ <div class="content">
+ <div class="NewsList">
+ <ul>
+ {{ range .Pages }}
+ <li>
+  <div class="news_title"><span>{{ .Date.Format "2006-01-02" }}</span><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+  <div class="news_jj">&nbsp; {{ .Summary | truncate 150 }}...<a href="{{ .RelPermalink }}" style="color:#cc0000;">【阅读全文】</a></div>
+ </li>
+ {{ end }}
+ </ul>
+ </div>
+ <div class="clear"></div>
+ 
+ {{ if gt .Paginator.TotalPages 1 }}
+ <div class="pagebar">
+ <div class="pagination">
+  {{ if .Paginator.HasPrev }}
+  <a class="page-item page-link" href="{{ .Paginator.First.URL }}" title="首页">首页</a>
+  <a class="page-item page-link st" href="{{ .Paginator.Prev.URL }}" title="上一页"><<</a>
+  {{ end }}
+  
+  {{ range .Paginator.Pagers }}
+  {{ if eq . $.Paginator }}
+  <a class="page-item page-link page-num-current" href="{{ .URL }}">{{ .PageNumber }}</a>
+  {{ else }}
+  <a class="page-item page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+  {{ end }}
+  {{ end }}
+  
+  {{ if .Paginator.HasNext }}
+  <a class="page-item page-link st" href="{{ .Paginator.Next.URL }}" title="下一页">>></a>
+  <a class="page-item page-link" href="{{ .Paginator.Last.URL }}" title="尾页">尾页</a>
+  {{ end }}
+ </div>
+ </div>
+ {{ end }}
+ </div>
+</div>
+
 {{ end }}

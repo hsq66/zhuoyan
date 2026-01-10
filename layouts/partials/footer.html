@@ -1,23 +1,20 @@
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>联系我们</h3>
-                <p>电话：{{ .Site.Params.company_phone }}</p>
-                <p>邮箱：{{ .Site.Params.company_email }}</p>
-                <p>地址：{{ .Site.Params.company_address }}</p>
-            </div>
-            <div class="footer-section">
-                <h3>快捷链接</h3>
-                <ul>
-                    {{ range .Site.Menus.main }}
-                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                    {{ end }}
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; {{ now.Year }} {{ .Site.Title }}. 保留所有权利。</p>
-        </div>
-    </div>
-</footer>
+<div class="footer">
+ <div class="main">
+ <div class="footer_left">
+ <div class="foot_link"><a href="{{ .Site.BaseURL }}">网站首页</a> <a href="/about/">关于我们</a> <a href="/products/">鼎英语</a> <a href="/news/">新闻动态</a> <a href="/contact/">联系我们</a></div>
+ <div class="clear"></div>
+ <div class="copyright"> {{ .Site.Params.copyright | default "© 2024 海南卓炎科技有限责任公司" }}&nbsp;&nbsp;ICP备案号：<a href="https://beian.miit.gov.cn/">{{ .Site.Params.icp | default "琼ICP备xxxxxxxx号" }}</a> </div>
+ </div>
+ <div class="footer_right" style="width: 225px;height: 115px;
+	background: url({{ "images/ewm.png" | relURL }}) left center no-repeat;
+	float: right;
+	overflow: hidden;
+	margin-top: 48px;
+	padding-left: 135px;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 30px">{{ .Site.Params.company | default "海南卓炎科技有限责任公司" }}<br>
+ <span>服务热线：{{ .Site.Params.phone | default "18923719468" }}</span><br>
+ 地址：{{ .Site.Params.address | default "海南省澄迈县老城镇高新技术产业示范区" }}</div>
+ </div>
+</div>

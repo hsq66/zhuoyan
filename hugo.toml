@@ -1,4 +1,4 @@
-baseURL = "https://zhuoyan.hn.cn/"
+baseURL = "https://hsq66.github.io/zhuoyan/"
 languageCode = "zh-CN"
 title = "海南卓炎科技有限责任公司"
 # theme = "dot-hugo"  # 暂时禁用主题，使用Hugo默认布局
@@ -13,23 +13,25 @@ enableGitInfo = false
   description = "智慧启航，未来已来！体验我们的智能教育与通信服务，让学习无界，沟通无限。"
   author = "卓炎科技"
   logo = "/images/logo.png"
-  logo_width = "156px"
-  logo_height = "58px"
+  logo_width = "576px"
+  logo_height = "133px"
+  welcome = "欢迎访问海南卓炎科技有限责任公司官网！"
   
   # 公司信息
-  company_name = "海南卓炎科技有限责任公司"
-  company_address = "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室"
-  company_phone = "18923719468"
-  company_mobile = "18923719468"
-  company_email = "axel@long.kim"
-  company_qq = "45451202"
+  company = "海南卓炎科技有限责任公司"
+  address = "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室"
+  phone = "18923719468"
+  email = "axel@long.kim"
+  copyright = "© 2024 海南卓炎科技有限责任公司 版权所有"
+  icp = "琼ICP备xxxxxxxx号"
   
   # 分支机构
   shenzhen_hq = "广东省深圳市龙岗区龙城街道办龙平西路137号祥情世纪城市广场二楼"
+  shenzhen_market = "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室"
   shenzhen_rd = "广东省深圳市南山区粤海街道海天一路11号软件产业基地5栋A座4栋433"
   
   # SEO
-  keywords = "AI英语,智能学习,鼎英语,智慧学习手机,OLED护眼台灯,卫星通信,数字化咨询"
+  keywords = "AI英语,智能学习,鼎英语,智慧学习手机,OLED护眼台灯,卫星通信,数字化咨询,智慧教育,健康照明"
   
   # 社交媒体
   [params.social]

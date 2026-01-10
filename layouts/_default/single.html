@@ -1,13 +1,32 @@
 {{ define "main" }}
-<div class="container">
-    <article>
-        <h1>{{ .Title }}</h1>
-        {{ with .Description }}
-        <p class="description">{{ . }}</p>
-        {{ end }}
-        <div class="content">
-            {{ .Content }}
-        </div>
-    </article>
+<div id="flash1"></div>
+
+<div class="weizhi">
+ <div class="main">
+ <div class="position">您的位置：<a href="{{ .Site.BaseURL }}">首页</a> >> {{ if .Section }}<a href="/{{ .Section }}/">{{ .Section | humanize }}</a> >> {{ end }}{{ .Title }}</div>
+ </div>
 </div>
+
+<div class="main">
+ <div class="content">
+ <div class="info_title">
+ <h1>{{ .Title }}</h1>
+ </div>
+ {{ if .Date }}
+ <div class="news_other">日期：{{ .Date.Format "2006-01-02" }}</div>
+ {{ end }}
+ <div class="clear"></div>
+ <div class="info_content">
+  {{ .Content }}
+ </div>
+ 
+ {{ with .PrevInSection }}
+ <div class="info_next">上一篇：<a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+ {{ end }}
+ {{ with .NextInSection }}
+ <div class="info_next">下一篇：<a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+ {{ end }}
+ </div>
+</div>
+
 {{ end }}
