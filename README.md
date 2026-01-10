@@ -1,148 +1,143 @@
-# 卓研知识库与支持中心
+# 海南卓炎科技有限责任公司官网
 
-基于 Hugo 静态网站生成器和 Dot 主题构建的知识库与技术支持中心。
+**智慧启航，未来已来！体验我们的智能教育与通信服务，让学习无界，沟通无限。**
 
-## 🚀 特性
+## 🎯 项目概述
 
-- ✨ 基于 Hugo 的快速静态网站
-- 📱 响应式设计，支持移动端
-- 🔍 内置搜索功能
-- 🌐 多语言支持（中文）
-- 📝 Markdown 编写文档
-- 🎨 基于 Dot 主题的专业外观
-- 🚀 自动部署到 GitHub Pages
+本项目是海南卓炎科技有限责任公司的官方网站，从PBootCMS (PHP)完整迁移到Hugo静态网站生成器，实现了100%的内容迁移和专业的企业门户网站结构。
 
-## 📋 前置要求
+- **原网站：** zhuoyan.hn.cn (PBootCMS)
+- **新网站：** Hugo静态网站
+- **部署平台：** GitHub Pages
+- **构建状态：** ✅ 成功（72页面）
 
-- [Hugo Extended](https://gohugo.io/installation/) v0.128.0 或更高版本
-- [Node.js](https://nodejs.org/) v16 或更高版本
-- [Git](https://git-scm.com/)
+## ✨ 核心业务
 
-## 🛠️ 本地开发
+### 🎓 AI智能英语 - 鼎英语
+助力全国50万+学员快速提升20~60分的颠覆性英语学习系统
 
-### 1. 克隆仓库
+### 📱 智慧学习手机 - 小嘢马
+专为学习设计，助学习、禁游戏、防沉迷
 
-```bash
-git clone https://github.com/hsq66/zhuoyan.git
-cd zhuoyan
-```
+### 💡 OLED护眼台灯
+减少90%有害蓝光，RG0无危险等级
 
-### 2. 安装依赖
+### 🛰️ 卫星通信服务
+80%地表覆盖的综合卫星通信物联解决方案
 
-```bash
-npm install
-```
+### 💼 数字化咨询
+工业4.0数字化信息咨询服务
 
-### 3. 启动开发服务器
+## 📊 迁移完成度
 
-```bash
-npm run dev
-```
+- ✅ **内容迁移：** 100% (15/15条数据库内容)
+- ✅ **导航结构：** 完整的7级导航菜单
+- ✅ **公司信息：** 完整保留所有联系方式和分支机构
+- ✅ **图片资源：** 547个静态文件
+- ✅ **页面总数：** 72页
 
-访问 `http://localhost:1313` 查看网站。
+## 🚀 快速开始
 
-## 📦 构建
-
-构建生产版本：
+### 本地预览
 
 ```bash
-npm run build
+# 克隆仓库
+git clone https://github.com/[username]/zhuoyan.tech.git
+cd zhuoyan.tech
+
+# 启动Hugo服务器
+hugo server
+
+# 访问 http://localhost:1313/
 ```
 
-构建后的文件将输出到 `public/` 目录。
-
-## 🚀 部署
-
-本项目配置了 GitHub Actions 自动部署工作流。当代码推送到 `main` 分支时，会自动构建并部署到 GitHub Pages。
-
-### 配置 GitHub Pages
-
-1. 进入仓库的 Settings > Pages
-2. Source 选择 "GitHub Actions"
-3. 推送代码到 main 分支即可自动部署
-
-网站将发布到：`https://hsq66.github.io/zhuoyan/`
-
-## 📝 内容管理
-
-### 添加新文档
-
-在 `content/zh/` 目录下创建 Markdown 文件：
+### 构建网站
 
 ```bash
-# 创建新的功能文档
-hugo new content/zh/features/new-feature.md
-
-# 创建新的安装指南
-hugo new content/zh/installation/new-guide.md
+hugo --gc --minify
 ```
 
-### 文档结构
+生成的网站在 `public/` 目录
+
+## 📁 网站结构
 
 ```
-content/zh/
-├── _index.md              # 首页
-├── features/              # 功能特性
-│   └── core-features/
-├── installation/          # 安装指南
-│   ├── requirements/
-│   └── install/
-└── pages/                 # 其他页面
-    ├── faq.md
-    └── contact.md
+/
+├── 首页
+├── 关于我们
+├── 产品中心
+│   ├── 鼎英语（AI智能英语）
+│   │   ├── 成长体系
+│   │   ├── 学习方案
+│   │   └── 核心技术
+│   ├── 智慧学习手机
+│   ├── OLED护眼台灯
+│   ├── 卫星通信服务
+│   └── 数字化咨询
+├── 荣誉资质
+│   ├── AI英语平台超级合伙人
+│   ├── 教学机器人品牌
+│   └── 空气净化品牌
+├── 成功案例
+│   ├── 深圳燎原实训
+│   ├── 万千家长口碑
+│   └── 优秀产品实践
+├── 新闻资讯
+│   ├── 公司新闻
+│   ├── 行业新闻
+│   └── 常见问题
+└── 联系我们
 ```
 
-### Front Matter 示例
+## 📞 联系我们
 
-```yaml
----
-title: "文档标题"
-description: "文档描述"
-weight: 1
-draft: false
----
+- **电话：** 18923719468
+- **邮箱：** axel@long.kim
+- **QQ：** 45451202
+- **官网：** www.zhuoyan.tech
 
-文档内容...
-```
+### 分支机构
 
-## 🎨 自定义
+**深圳总部：**  
+广东省深圳市龙岗区龙城街道办龙平西路137号祥情世纪城市广场二楼
 
-### 修改配置
+**海南运营中心：**  
+海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室
 
-主要配置文件：
-- `hugo.toml` - Hugo 主配置
-- `config/_default/params.toml` - 主题参数
-- `config/_default/languages.toml` - 语言配置
+**深圳研发中心：**  
+广东省深圳市南山区粤海街道海天一路11号软件产业基地5栋A座4栋433
 
-### 修改样式
+## 🛠️ 技术栈
 
-主题样式位于 `dot-hugo/assets/scss/` 目录。
+- **静态网站生成器：** Hugo v0.152.2
+- **原网站技术：** PBootCMS (PHP) + SQLite
+- **部署平台：** GitHub Pages
+- **CI/CD：** GitHub Actions
+- **样式：** 自定义CSS（响应式设计）
 
-### 添加图片
+## 📝 部署说明
 
-将图片放在以下目录：
-- `static/images/` - 网站图片
-- `content/zh/*/images/` - 文档相关图片
+网站通过GitHub Actions自动构建和部署到GitHub Pages。每次推送到main分支时，会自动触发构建流程。
 
-## 📚 文档
+### GitHub Pages设置
 
-- [Hugo 文档](https://gohugo.io/documentation/)
-- [Dot 主题文档](https://docs.gethugothemes.com/dot/)
+1. 进入仓库Settings > Pages
+2. Source选择"GitHub Actions"
+3. 等待Actions完成构建
+4. 访问生成的URL
 
-## 🤝 贡献
+### 自定义域名
 
-欢迎提交 Issue 和 Pull Request！
+如需绑定 zhuoyan.hn.cn：
+
+1. 在DNS设置中添加CNAME记录指向 `[username].github.io`
+2. 在仓库Settings > Pages中设置Custom domain
+3. 等待DNS生效
 
 ## 📄 许可证
 
-MIT License
-
-## 📧 联系方式
-
-- 网站：https://zhuoyan.hn.cn
-- GitHub：https://github.com/hsq66
-- 邮箱：support@example.com
+© 2026 海南卓炎科技有限责任公司. 保留所有权利。
 
 ---
 
-由卓研团队用 ❤️ 构建
+**诚以载道，以信立本，合作共赢！**
