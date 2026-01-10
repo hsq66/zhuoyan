@@ -1,0 +1,129 @@
+# 中文翻译文件
+- id: read_more
+  translation: "阅读更多"
+
+- id: latest_article
+  translation: "最新文章"
+
+- id: categories
+  translation: "分类"
+
+- id: tags
+  translation: "标签"
+
+- id: see_all
+  translation: "查看全部"
+
+- id: apply_filter
+  translation: "应用筛选"
+
+- id: filter_by_category
+  translation: "按分类筛选"
+
+- id: all_category
+  translation: "全部分类"
+
+- id: search
+  translation: "搜索"
+
+- id: search_placeholder
+  translation: "搜索文档..."
+
+- id: search_results
+  translation: "搜索结果"
+
+- id: no_results
+  translation: "没有找到结果"
+
+- id: contact_us
+  translation: "联系我们"
+
+- id: send_message
+  translation: "发送消息"
+
+- id: your_name
+  translation: "您的姓名"
+
+- id: your_email
+  translation: "您的邮箱"
+
+- id: your_message
+  translation: "您的消息"
+
+- id: submit
+  translation: "提交"
+
+- id: required_field
+  translation: "必填项"
+
+- id: invalid_email
+  translation: "无效的邮箱地址"
+
+- id: message_sent
+  translation: "消息已发送"
+
+- id: message_error
+  translation: "发送失败，请重试"
+
+- id: home
+  translation: "首页"
+
+- id: about
+  translation: "关于"
+
+- id: documentation
+  translation: "文档"
+
+- id: faq
+  translation: "常见问题"
+
+- id: contact
+  translation: "联系"
+
+- id: copyright
+  translation: "版权所有"
+
+- id: all_rights_reserved
+  translation: "保留所有权利"
+
+- id: powered_by
+  translation: "技术支持"
+
+- id: last_updated
+  translation: "最后更新"
+
+- id: edit_this_page
+  translation: "编辑此页"
+
+- id: share
+  translation: "分享"
+
+- id: print
+  translation: "打印"
+
+- id: table_of_contents
+  translation: "目录"
+
+- id: on_this_page
+  translation: "本页内容"
+
+- id: related_articles
+  translation: "相关文章"
+
+- id: previous
+  translation: "上一页"
+
+- id: next
+  translation: "下一页"
+
+- id: page
+  translation: "页"
+
+- id: of
+  translation: "共"
+
+- id: showing
+  translation: "显示"
+
+- id: results
+  translation: "结果"
