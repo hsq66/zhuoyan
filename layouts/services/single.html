@@ -1,0 +1,127 @@
+{{ define "main" }}
+<div id="flash1"></div>
+
+<div class="weizhi">
+ <div class="main">
+ <div class="position">您的位置：<a href="{{ .Site.BaseURL }}">首页</a> >> <a href="{{ "services/" | relURL }}">产品与解决方案</a> >> {{ .Title }}</div>
+ </div>
+</div>
+
+<div class="main" style="margin-top: 40px; margin-bottom: 60px;">
+ 
+ <!-- 产品头部 -->
+ <div style="background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%); border-radius: 12px; padding: 50px; color: #fff; margin-bottom: 40px;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+   <div>
+    {{ if .Params.badge }}
+    <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 15px;">
+     {{ .Params.badge }}
+    </div>
+    {{ end }}
+    <h1 style="font-size: 42px; margin-bottom: 20px; color: #fff;">{{ .Title }}</h1>
+    <p style="font-size: 18px; line-height: 1.8; opacity: 0.95;">
+     {{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}
+    </p>
+    {{ if .Params.users }}
+    <div style="margin-top: 25px; font-size: 16px;">
+     <span style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 20px;">
+      👥 {{ .Params.users }}
+     </span>
+    </div>
+    {{ end }}
+   </div>
+   <div style="text-align: center;">
+    {{ if .Params.image }}
+    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="max-width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+    {{ end }}
+   </div>
+  </div>
+ </div>
+
+ <!-- 产品内容 -->
+ <div class="content" style="background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 40px;">
+  <div class="info_content" style="font-size: 16px; line-height: 2; color: #333;">
+   {{ .Content }}
+  </div>
+ </div>
+
+ <!-- 核心特点 -->
+ {{ if .Params.features }}
+ <div style="margin-bottom: 40px;">
+  <h2 style="font-size: 32px; color: #005f4a; margin-bottom: 30px; text-align: center;">核心特点</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+   {{ range .Params.features }}
+   <div style="background: #f8f8f8; border-radius: 12px; padding: 30px; text-align: center; transition: all 0.3s;">
+    <div style="font-size: 48px; margin-bottom: 15px;">{{ .icon }}</div>
+    <h4 style="font-size: 18px; color: #005f4a; margin-bottom: 10px;">{{ .title }}</h4>
+    <p style="color: #666; font-size: 14px; line-height: 1.6;">{{ .description }}</p>
+   </div>
+   {{ end }}
+  </div>
+ </div>
+ {{ end }}
+
+ <!-- 技术优势 -->
+ {{ if .Params.advantages }}
+ <div style="background: #f8f8f8; border-radius: 12px; padding: 40px; margin-bottom: 40px;">
+  <h2 style="font-size: 32px; color: #005f4a; margin-bottom: 30px; text-align: center;">技术优势</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+   {{ range .Params.advantages }}
+   <div style="background: #fff; border-radius: 8px; padding: 25px; border-left: 4px solid #005f4a;">
+    <h4 style="font-size: 18px; color: #005f4a; margin-bottom: 10px;">✓ {{ .title }}</h4>
+    <p style="color: #666; font-size: 14px; line-height: 1.6;">{{ .description }}</p>
+   </div>
+   {{ end }}
+  </div>
+ </div>
+ {{ end }}
+
+ <!-- 相关产品 -->
+ <div style="margin-bottom: 40px;">
+  <h2 style="font-size: 32px; color: #005f4a; margin-bottom: 30px; text-align: center;">相关产品</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+   {{ $currentPage := . }}
+   {{ range first 3 (where .Site.RegularPages "Section" "services") }}
+    {{ if ne .RelPermalink $currentPage.RelPermalink }}
+    <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s;">
+     <div style="height: 180px; overflow: hidden;">
+      <a href="{{ .RelPermalink }}">
+       <img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+      </a>
+     </div>
+     <div style="padding: 20px;">
+      <h4 style="font-size: 18px; color: #005f4a; margin-bottom: 10px;">
+       <a href="{{ .RelPermalink }}" style="color: #005f4a;">{{ .Title }}</a>
+      </h4>
+      <p style="color: #666; font-size: 14px; line-height: 1.6;">{{ .Summary | truncate 80 }}</p>
+      <a href="{{ .RelPermalink }}" style="color: #005f4a; font-size: 14px; font-weight: bold; text-decoration: none; margin-top: 10px; display: inline-block;">
+       了解详情 →
+      </a>
+     </div>
+    </div>
+    {{ end }}
+   {{ end }}
+  </div>
+ </div>
+
+ <!-- CTA区域 -->
+ <div style="background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%); border-radius: 12px; padding: 50px; text-align: center; color: #fff;">
+  <h3 style="font-size: 32px; margin-bottom: 15px; color: #fff;">准备开始了吗？</h3>
+  <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">联系我们，获取专业的解决方案和技术支持</p>
+  <div>
+   <a href="{{ "contact/" | relURL }}" style="display: inline-block; background: #fff; color: #005f4a; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-size: 16px; font-weight: bold; margin: 0 10px; transition: all 0.3s;">
+    立即咨询
+   </a>
+   <a href="{{ "cases/" | relURL }}" style="display: inline-block; background: rgba(255,255,255,0.2); color: #fff; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-size: 16px; font-weight: bold; margin: 0 10px; transition: all 0.3s;">
+    查看案例
+   </a>
+  </div>
+  <div style="margin-top: 30px; font-size: 18px;">
+   <span style="opacity: 0.9;">服务热线：</span>
+   <span style="font-weight: bold; font-size: 22px;">📞 18923719468</span>
+  </div>
+ </div>
+
+</div>
+
+{{ end }}

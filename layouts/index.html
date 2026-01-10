@@ -17,20 +17,21 @@
  <div><img src="{{ "images/inproduct_left.gif" | relURL }}" width="222" height="80" /></div>
  <div class="insort">
  <ul>
-  <li><a href="/products/">鼎英语-AI智能英语</a></li>
-  <li><a href="/devices/">智慧学习手机</a></li>
-  <li><a href="/lighting/">OLED护眼台灯</a></li>
+  <li><a href="{{ "services/ai-english/" | relURL }}">鼎英语-AI智能英语</a></li>
+  <li><a href="{{ "services/smart-phone/" | relURL }}">智慧学习手机</a></li>
+  <li><a href="{{ "services/oled-lamp/" | relURL }}">OLED护眼台灯</a></li>
  </ul>
- <div class="insort_more"><a href="/products/"><img src="{{ "images/isortmore.gif" | relURL }}" width="192" height="52" /></a></div>
+ <div class="insort_more"><a href="{{ "services/" | relURL }}"><img src="{{ "images/isortmore.gif" | relURL }}" width="192" height="52" /></a></div>
  </div>
  <div><img src="{{ "images/ips_bottom.gif" | relURL }}" width="222" height="9" /></div>
  </div>
  
  <div class="inproduct_right">
  <ul>
-  {{ range first 6 (where .Site.RegularPages "Section" "in" (slice "products" "devices" "lighting")) }}
+  {{ $services := where .Site.RegularPages "Section" "services" }}
+  {{ range first 6 $services }}
   <li>
-   <div class="ipdiv"><a href="{{ .RelPermalink }}" title="{{ .Title }}"><img src="{{ .Params.image | default "/images/index_about.jpg" | relURL }}"></a></div>
+   <div class="ipdiv"><a href="{{ .RelPermalink }}" title="{{ .Title }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}"></a></div>
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </li>
   {{ end }}
@@ -44,10 +45,10 @@
 <div class="abpro">
  <div class="main">
  <div class="index_about">
- <div><a href="/about/"><img src="{{ "images/index_about.png" | relURL }}" width="732" height="74" /></a></div>
+ <div><a href="{{ "pages/about/" | relURL }}"><img src="{{ "images/index_about.png" | relURL }}" width="732" height="74" /></a></div>
  <div class="index_about_jj">
   <img src="{{ "images/index_about.jpg" | relURL }}" width="278" height="191" />
-  {{ with .Site.GetPage "/about" }}
+  {{ with .Site.GetPage "pages/about" }}
    {{ .Summary }}
   {{ else }}
    <span style="font-size: 16px;">卓炎科技</span>是一家立足于人工智能，智慧教育，健康生活，致力于让我们年轻一代享学习成长与智慧规划的科技型创新与咨询服务公司。同时基于信息物联通信，新型的发光材料，研究与拓展塑造低碳、环保、节能的照明第四代新型科技应用产品，服务我们美好的舒适生活。
@@ -56,12 +57,13 @@
  </div>
  
  <div class="index_honor">
- <div><a href="/honors/"><img src="{{ "images/index_honor.png" | relURL }}" width="329" height="74" /></a></div>
+ <div><a href="{{ "honors/" | relURL }}"><img src="{{ "images/index_honor.png" | relURL }}" width="329" height="74" /></a></div>
  <div class="productshow1">
  <div class="scrollcontainer">
   <ul>
-  {{ range first 10 (where .Site.RegularPages "Section" "honors") }}
-  <li><a href="{{ .RelPermalink }}"><img src="{{ .Params.image | default "/images/index_about.jpg" | relURL }}" width="233" height="140"><br>{{ .Title }}</a></li>
+  {{ $honors := where .Site.RegularPages "Section" "honors" }}
+  {{ range first 10 $honors }}
+  <li><a href="{{ .RelPermalink }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="233" height="140"><br>{{ .Title }}</a></li>
   {{ end }}
   </ul>
  </div>
@@ -91,8 +93,9 @@
  <div class="productshow">
  <div class="scrollcontainer">
  <ul>
-  {{ range first 10 (where .Site.RegularPages "Section" "products") }}
-  <li><a href="{{ .RelPermalink }}"><img src="{{ .Params.image | default "/images/index_about.jpg" | relURL }}" width="233" height="140"><br>{{ .Title }}</a></li>
+  {{ $services := where .Site.RegularPages "Section" "services" }}
+  {{ range first 10 $services }}
+  <li><a href="{{ .RelPermalink }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="233" height="140"><br>{{ .Title }}</a></li>
   {{ end }}
  </ul>
  </div>
@@ -120,12 +123,12 @@ $(function(){
  <div class="in_project_title"><img src="{{ "images/in_project.jpg" | relURL }}" width="687" height="60" /></div>
  {{ $cases := where .Site.RegularPages "Section" "cases" }}
  {{ with index $cases 0 }}
- <div class="in_project_left"><a href="{{ .RelPermalink }}"><img src="{{ .Params.image | default "/images/index_about.jpg" | relURL }}" width="445" height="379"></a></div>
+ <div class="in_project_left"><a href="{{ .RelPermalink }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="445" height="379"></a></div>
  {{ end }}
  <div class="in_project_right">
  <ul>
  {{ range after 1 (first 7 $cases) }}
- <li><a href="{{ .RelPermalink }}" title="{{ .Title }}"><img src="{{ .Params.image | default "/images/index_about.jpg" | relURL }}" width="196" height="178"></a></li>
+ <li><a href="{{ .RelPermalink }}" title="{{ .Title }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="196" height="178"></a></li>
  {{ end }}
  </ul>
  </div>
@@ -136,10 +139,11 @@ $(function(){
 <!-- 新闻动态 -->
 <div class="main">
  <div class="index_news_left">
- <div><a href="/news/"><img src="{{ "images/index_news_left.jpg" | relURL }}" width="322" height="50" /></a></div>
+ <div><a href="{{ "news/faq/" | relURL }}"><img src="{{ "images/index_news_left.jpg" | relURL }}" width="322" height="50" /></a></div>
  <div class="index_ask">
  <ul>
- {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+ {{ $faq := where .Site.RegularPages "Section" "news" }}
+ {{ range first 3 $faq }}
  <li>
   <div class="ask_title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
   <div class="ask_content">&nbsp; &nbsp;{{ .Summary | truncate 40 }}...</div>
@@ -150,8 +154,9 @@ $(function(){
  </div>
  
  <div class="index_news_right">
- <div><a href="/news/"><img src="{{ "images/index_news_right.jpg" | relURL }}" width="728" height="47" /></a></div>
- {{ $newsWithImage := where (where .Site.RegularPages "Section" "news") ".Params.image" "!=" nil }}
+ <div><a href="{{ "news/" | relURL }}"><img src="{{ "images/index_news_right.jpg" | relURL }}" width="728" height="47" /></a></div>
+ {{ $news := where .Site.RegularPages "Section" "news" }}
+ {{ $newsWithImage := where $news ".Params.image" "!=" nil }}
  {{ with index $newsWithImage 0 }}
  <div class="index_news_recc">
  <div class="recc_news_img"><a href="{{ .RelPermalink }}"><img src="{{ .Params.image | relURL }}"></a></div>
@@ -164,7 +169,7 @@ $(function(){
  <div class="clear"></div>
  <div class="innews">
  <ul>
- {{ range first 5 (where .Site.RegularPages "Section" "news") }}
+ {{ range first 5 $news }}
  <li><b>&middot;</b> <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a><span>{{ .Date.Format "2006-01-02" }}</span></li>
  {{ end }}
  </ul>
@@ -178,8 +183,9 @@ $(function(){
 <div class="main">
  <div class="links">
   <a href="https://www.zhuoyan.tech" target="_blank">卓炎科技</a> &nbsp;&nbsp;
-  <a href="/products/" target="_blank">鼎英语</a> &nbsp;&nbsp;
-  <a href="/devices/" target="_blank">智慧学习手机</a> &nbsp;&nbsp;
+  <a href="{{ "services/ai-english/" | relURL }}">鼎英语</a> &nbsp;&nbsp;
+  <a href="{{ "services/smart-phone/" | relURL }}">智慧学习手机</a> &nbsp;&nbsp;
+  <a href="{{ "services/oled-lamp/" | relURL }}">OLED护眼台灯</a> &nbsp;&nbsp;
  </div>
 </div>
 

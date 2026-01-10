@@ -1,0 +1,144 @@
+{{ define "main" }}
+<div id="flash1"></div>
+
+<div class="weizhi">
+ <div class="main">
+ <div class="position">您的位置：<a href="{{ .Site.BaseURL }}">首页</a> >> 产品与解决方案</div>
+ </div>
+</div>
+
+<div class="main" style="margin-top: 40px; margin-bottom: 60px;">
+ 
+ <!-- 产品与解决方案标题 -->
+ <div style="text-align: center; margin-bottom: 50px;">
+  <h1 style="font-size: 36px; color: #005f4a; margin-bottom: 15px;">产品与解决方案</h1>
+  <p style="font-size: 18px; color: #666; line-height: 1.8;">
+   卓炎科技致力于为客户提供全方位的智慧教育和数字化解决方案<br>
+   我们的核心业务涵盖五大领域，为50万+用户提供专业服务
+  </p>
+ </div>
+
+ <!-- 核心产品展示 -->
+ <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px;">
+  
+  {{ range .Pages }}
+  <div class="service-card" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+   <div class="service-image" style="height: 220px; overflow: hidden; position: relative;">
+    {{ if .Params.image }}
+    <a href="{{ .RelPermalink }}">
+     <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+    </a>
+    {{ else }}
+    <a href="{{ .RelPermalink }}">
+     <img src="{{ "images/index_about.jpg" | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+    </a>
+    {{ end }}
+    <div style="position: absolute; top: 15px; right: 15px; background: #005f4a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px;">
+     {{ if .Params.badge }}{{ .Params.badge }}{{ else }}核心产品{{ end }}
+    </div>
+   </div>
+   <div class="service-content" style="padding: 25px;">
+    <h3 style="font-size: 22px; color: #005f4a; margin-bottom: 12px; font-weight: bold;">
+     <a href="{{ .RelPermalink }}" style="color: #005f4a;">{{ .Title }}</a>
+    </h3>
+    <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 14px;">
+     {{ .Summary | truncate 100 }}
+    </p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+     <a href="{{ .RelPermalink }}" style="color: #005f4a; font-weight: bold; text-decoration: none; transition: all 0.3s;">
+      了解详情 →
+     </a>
+     {{ if .Params.users }}
+     <span style="color: #999; font-size: 12px;">
+      <i class="icon-users"></i> {{ .Params.users }}
+     </span>
+     {{ end }}
+    </div>
+   </div>
+  </div>
+  {{ end }}
+  
+ </div>
+
+ <!-- 核心优势 -->
+ <div style="background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%); border-radius: 12px; padding: 50px; color: #fff; margin-bottom: 60px;">
+  <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px; color: #fff;">为什么选择卓炎科技</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+   <div style="text-align: center;">
+    <div style="font-size: 48px; font-weight: bold; margin-bottom: 10px;">50万+</div>
+    <div style="font-size: 16px; opacity: 0.9;">服务用户数量</div>
+   </div>
+   <div style="text-align: center;">
+    <div style="font-size: 48px; font-weight: bold; margin-bottom: 10px;">20-60分</div>
+    <div style="font-size: 16px; opacity: 0.9;">平均提分幅度</div>
+   </div>
+   <div style="text-align: center;">
+    <div style="font-size: 48px; font-weight: bold; margin-bottom: 10px;">90%</div>
+    <div style="font-size: 16px; opacity: 0.9;">有害蓝光减少</div>
+   </div>
+   <div style="text-align: center;">
+    <div style="font-size: 48px; font-weight: bold; margin-bottom: 10px;">80%</div>
+    <div style="font-size: 16px; opacity: 0.9;">地表通信覆盖</div>
+   </div>
+  </div>
+ </div>
+
+ <!-- 服务流程 -->
+ <div style="margin-bottom: 60px;">
+  <h2 style="text-align: center; font-size: 32px; color: #005f4a; margin-bottom: 40px;">服务流程</h2>
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+   <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px;">
+    <div style="width: 80px; height: 80px; background: #005f4a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin: 0 auto 15px;">1</div>
+    <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">需求咨询</h4>
+    <p style="color: #666; font-size: 14px;">了解您的具体需求</p>
+   </div>
+   <div style="flex: 0 0 50px; text-align: center; color: #005f4a; font-size: 24px;">→</div>
+   <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px;">
+    <div style="width: 80px; height: 80px; background: #005f4a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin: 0 auto 15px;">2</div>
+    <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">方案定制</h4>
+    <p style="color: #666; font-size: 14px;">量身定制解决方案</p>
+   </div>
+   <div style="flex: 0 0 50px; text-align: center; color: #005f4a; font-size: 24px;">→</div>
+   <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px;">
+    <div style="width: 80px; height: 80px; background: #005f4a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin: 0 auto 15px;">3</div>
+    <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">实施部署</h4>
+    <p style="color: #666; font-size: 14px;">专业团队快速实施</p>
+   </div>
+   <div style="flex: 0 0 50px; text-align: center; color: #005f4a; font-size: 24px;">→</div>
+   <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px;">
+    <div style="width: 80px; height: 80px; background: #005f4a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin: 0 auto 15px;">4</div>
+    <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">持续服务</h4>
+    <p style="color: #666; font-size: 14px;">7×24小时技术支持</p>
+   </div>
+  </div>
+ </div>
+
+ <!-- 联系咨询 -->
+ <div style="background: #f8f8f8; border-radius: 12px; padding: 40px; text-align: center;">
+  <h3 style="font-size: 28px; color: #005f4a; margin-bottom: 15px;">需要了解更多？</h3>
+  <p style="color: #666; font-size: 16px; margin-bottom: 25px;">我们的专业团队随时为您提供咨询服务</p>
+  <div>
+   <a href="{{ "contact/" | relURL }}" style="display: inline-block; background: #005f4a; color: #fff; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-size: 16px; font-weight: bold; transition: all 0.3s;">
+    立即咨询
+   </a>
+   <span style="margin: 0 20px; color: #999;">或</span>
+   <span style="color: #005f4a; font-size: 18px; font-weight: bold;">📞 18923719468</span>
+  </div>
+ </div>
+
+</div>
+
+<style>
+.service-card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 12px 32px rgba(0,95,74,0.2);
+}
+.service-card:hover .service-image img {
+ transform: scale(1.1);
+}
+.service-card h3 a:hover {
+ color: #048a6c;
+}
+</style>
+
+{{ end }}
