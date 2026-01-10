@@ -7,8 +7,8 @@ logo = "images/logo.png"
 logo_width = "200px"
 
 # OpenGraph / Twitter Card metadata
-description = "卓研知识库与技术支持中心"
-author = "卓研团队"
+description = "卓炎科技 - 立足于人工智能、智慧教育、健康生活，致力于让年轻一代享受学习成长与智慧规划的科技型创新与咨询服务公司"
+author = "卓炎科技"
 image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
 
 # contact form action
@@ -21,7 +21,7 @@ search = true
 mainSections = ["features", "installation"]
 
 # copyright
-copyright = "Copyright &copy; 2026 卓研团队"
+copyright = "Copyright &copy; 2026 卓炎科技 版权所有"
 
 # Preloader
 [preloader]
@@ -42,7 +42,7 @@ content = "本网站使用 cookies 来改善您的浏览体验。"
 button = "我知道了"
 
 # footer content
-footer_content = "卓研致力于为用户提供优质的技术支持和知识分享。"
+footer_content = "卓炎科技 - 让年轻一代享受学习成长与智慧规划"
 
 # footer logo
 footer_logo = "images/logo.png"

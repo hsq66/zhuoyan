@@ -6,20 +6,20 @@ contentDir = "content/zh"
 weight = 1
 
 # copyright
-copyright = "Copyright &copy; 2026 卓研团队"
+copyright = "Copyright &copy; 2026 卓炎科技 版权所有"
 
 # banner
 [zh.params.banner]
-title = "卓研知识库与支持中心"
-subtitle = "快速找到您需要的答案和技术支持"
+title = "卓炎科技"
+subtitle = "人工智能 · 智慧教育 · 健康生活"
 bg_image = "images/banner.jpg"
 placeholder = "搜索您的问题..."
 
 # call to action
 [zh.params.cta]
 enable = true
-title = "没有找到您需要的答案？"
-content = "我们的支持团队随时准备为您提供帮助。"
+title = "开启智慧未来"
+content = "让我们一起探索人工智能、智慧教育和健康生活的无限可能"
 
 [zh.params.cta.button]
 enable = true
@@ -33,24 +33,29 @@ url = ""
 weight = 1
 
 [[zh.menu.main]]
-name = "功能特性"
-url = "features"
+name = "关于我们"
+url = "about"
 weight = 2
 
 [[zh.menu.main]]
-name = "安装指南"
-url = "installation"
+name = "产品服务"
+url = "services"
 weight = 3
 
 [[zh.menu.main]]
-name = "常见问题"
-url = "faq"
+name = "解决方案"
+url = "solutions"
 weight = 4
+
+[[zh.menu.main]]
+name = "新闻动态"
+url = "news"
+weight = 5
 
 [[zh.menu.main]]
 name = "联系我们"
 url = "contact"
-weight = 5
+weight = 6
 
 # footer menu
 [[zh.menu.footer]]
