@@ -1,0 +1,20 @@
+<div class="top">
+ <div class="main">
+ <div class="fl">{label:welcome}</div>
+ <div class="fr">{pboot:sort scode=1} <a href="[sort:link]">[sort:name]</a>{/pboot:sort} | {pboot:sort scode=12} <a href="[sort:link]">[sort:name]</a>{/pboot:sort}</div>
+ </div>
+</div>
+<div class="head">
+ <div class="main">
+ <div class="logo" style="width: 576px;height: 133px;background: url({pboot:sitelogo}) no-repeat;float: left"><a href="{pboot:sitedomain}"></a></div>
+ <div class="top_tel"></div>
+ </div>
+</div>
+<div class="menu">
+ <ul>
+ <li><a href="{pboot:sitedomain}">卓炎科技</a></li>
+ {pboot:nav parent=0 num=8}
+ <li {pboot:if([nav:scode]=={sort:tcode})}class="on"{/pboot:if}><a href="[nav:link]">[nav:name]</a></li>
+ {/pboot:nav}
+ </ul>
+</div>

@@ -1,0 +1,63 @@
+{include file=comm/head3.html}
+ 
+<!-- head End --> 
+<!-- ym-banner start -->
+<section class="ny-banner text-center" style="background-image:url({pboot:sitetplpath}/images/2014091259957041.png)">
+  <div class="container text-left">
+    <h2>{sort:name} {sort:subname}<small>{sort:def1}</small></h2>
+    <p class="weizhi">当前位置：{pboot:position} </p>
+  </div>
+</section>
+<!-- ym-banner End --> 
+<!-- crumbs start -->
+<section class="crumbs text-right">
+  <div class="container">
+    <ul class="list-unstyled">
+     	{pboot:nav parent={sort:tcode}}
+      <li><a href="[nav:link]" >[nav:name]</a></li>
+		{/pboot:nav}  
+    </ul>
+  </div>
+</section>
+<!-- crumbs End --> 
+<!-- content start -->
+<div class="neirong">
+  <article class="container info sx-padding clearfix" id="demo">
+    <main class="main pull-left">
+      <h2 class="biaoti wow animated fadeInUp" >{content:title}</h2>
+      <p class="shuoming wow animated fadeInUp">日期：{content:date style=Y-m-d} / 人气：<span id="show_i_hits">{content:visits}</span><br/>关键词：{pboot:tags id={content:id} target=tag}
+<a href="[tags:link]">[tags:text]</a>
+{/pboot:tags}</p>
+      <div class="wow animated fadeInUp">    
+<div>{content:content}</div>
+      </div>
+      <p class="text-right wow animated fadeInUp animated" style="visibility: visible;">编辑：{content:author}</p>
+      <div class="content_page"></div>
+      <hr />
+      <div class="text-center wow animated fadeInUp"><a href='{content:prelink}' class='btn-success'>上一篇：{content:pretitle}</a> <a href='{content:nextlink}' class='btn-success'>下一篇：{content:nexttitle}</a></div>
+    </main>
+	  
+    <aside class="aside pull-left">
+      <h4 class="ny-h4 wow animated fadeInUp">相关内容 <small>Related</small></h4>
+      <ul class="list-unstyled clearfix wow animated fadeInUp">
+		    {pboot:list scode={content:scode} num=6}
+        <li><a href="[list:link]" target="_blank" >[list:title]</a><small class="pull-right">[list:date style=m-d]</small></li>
+           {/pboot:list}
+      </ul>
+      
+    <!--联系方式-->
+      <h4 class="ny-h4 wow animated fadeInUp">联系我们 <small>Contact US</small></h4>
+      <ul class="list-unstyled clearfix wow animated fadeInUp">
+        <li class="red">服务手机：{pboot:companymobile}</li>
+        <li class="red">在线咨询：
+			<small class="xx-qq"><a href="#" target="_blank">qq咨询</a></small> 
+			<small class="xx-sq"><a href="#">商桥咨询</a></small>
+		  </li>
+      </ul>
+    </aside>
+  </article>
+</div>
+<!-- content End --> 
+<!-- footer start --> 
+<!-- footer start -->
+{include file=foot.html}

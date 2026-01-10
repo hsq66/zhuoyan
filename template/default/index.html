@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{pboot:pagetitle}</title>
+<meta name="description" content="{pboot:sitedescription}"/>
+<meta name="keywords" content="{pboot:sitekeywords}"/>
+<meta name="author" content="order by genban.org"/>
+<link rel="stylesheet" href="{pboot:sitedomain}/skin/css/style.css">
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery-1.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+ $("#index").addClass("on");
+});
+</script>
+</head>
+<body>
+<SCRIPT type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.js"></SCRIPT> 
+{include file=head.html} 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/front1.js"></script>
+<div id="flash"> {pboot:slide gid=1 num=10 order=date}
+ <div class="banner_[list:i] banner" style="background-image:url([slide:src]);"></div>
+ {/pboot:slide}
+ <div class="banner_bar"> {pboot:slide gid=1 num=10 order=date}<a class="banner_btn" href="javascript:void(0);" num="[slide:i]"></a>{/pboot:slide}</div>
+</div>
+<div class="clear"></div>
+<div class="main">
+ <div class="inproduct_left">
+ <div><img src="{pboot:sitedomain}/skin/images/inproduct_left.gif" width="222" height="80" /></div>
+ <div class="insort">
+ <ul>
+ {pboot:nav num=10 parent=2}
+ <li><a href="[nav:link]" >[nav:name]</a></li>
+ {/pboot:nav}
+ </ul>
+ <div class="insort_more">{pboot:sort scode=2} <a href="[sort:link]"><img src="{pboot:sitedomain}/skin/images/isortmore.gif" width="192" height="52" /></a>{/pboot:sort} </div>
+ </div>
+ <div><img src="{pboot:sitedomain}/skin/images/ips_bottom.gif" width="222" height="9" /></div>
+ </div>
+ <div class="inproduct_right">
+ <ul>
+ {pboot:list scode=2 num=6 order=date}
+ <li>
+ <div class="ipdiv"><a href="[list:link]" title="[list:title]"><img src="[list:ico]"></div>
+ [list:title]</a></li>
+ {/pboot:list}
+ </ul>
+ </div>
+</div>
+<div class="clear"></div>
+<div class="abpro">
+ <div class="main">
+ <div class="index_about">
+ <div>{pboot:sort scode=1} <a href="[sort:link]"><img src="{pboot:sitedomain}/skin/images/index_about.png" width="732" height="74" /></a>{/pboot:sort} </div>
+ <div class="index_about_jj"><img src="{pboot:sitedomain}/skin/images/index_about.jpg" width="278" height="191" />{pboot:content scode=1} [content:content drophtml=1 len=210]{/pboot:content}</div>
+ </div>
+ <div class="index_honor">
+ <div>{pboot:sort scode=7} <a href="[sort:link]"><img src="{pboot:sitedomain}/skin/images/index_honor.png" width="329" height="74" /></a>{/pboot:sort} </div>
+ <div class="productshow1">
+ <div class="scrollcontainer">
+  <ul>
+  {pboot:list scode=7 num=10 order=date}
+  <li><a href="[list:link]"><img src="[list:ico]" width="233" height="140"><br>
+  [list:title]</a></li>
+  {/pboot:list}
+  </ul>
+ </div>
+ <a class="abtn aright" href="#right">右移</a> <a class="abtn aleft" href="#left">左移</a> </div>
+ <script type="text/javascript">
+  $(function(){
+  
+  //四、循环切换;
+  $(".productshow1:eq(0)").Xslider({
+   unitdisplayed:3,
+   numtoMove:1,
+   autoscroll:3000, //自动移动间隔时间 默认null不自动移动;
+   loop:"cycle"
+  });
+  
+  $("a").focus(function(){this.blur();});
+  })
+  </script> 
+ </div>
+ </div>
+ <div class="clear"></div>
+ <div class="main"> 
+ <script type="text/javascript" src="{pboot:sitedomain}/skin/js/xslider.js"></script>
+ <div class="productshow">
+ <div class="scrollcontainer">
+ <ul>
+  {pboot:list scode=19 num=10 order=date}
+  <li><a href="[list:link]"><img src="[list:ico]" width="233" height="140"><br>
+  [list:title]</a></li>
+  {/pboot:list}
+ </ul>
+ </div>
+ <a class="abtn aright" href="#right" style="display:none">右移</a> <a class="abtn aleft" href="#left" style="display:none">左移</a> </div>
+ <script type="text/javascript">
+$(function(){
+	
+	//四、循环切换;
+	$(".productshow:eq(0)").Xslider({
+		unitdisplayed:3,
+		numtoMove:1,
+		autoscroll:2500, //自动移动间隔时间 默认null不自动移动;
+		loop:"cycle"
+	});
+
+	$("a").focus(function(){this.blur();});
+})
+</script> 
+ </div>
+</div>
+<div class="clear"></div>
+<div class="main">
+ <div class="in_project_title"><img src="{pboot:sitedomain}/skin/images/in_project.jpg" width="687" height="60" /></div>
+ {pboot:list scode=9 num=1 start=1}
+ <div class="in_project_left"><a href="[list:link]"><img src="[list:ico]" width="445" height="379"></a> </div>
+ {/pboot:list}
+ <div class="in_project_right">
+ <ul>
+ {pboot:list scode=9 num=6 start=2}
+ <li><a href="[list:link]" title="[list:title]"><img src="[list:ico]" width="196" height="178"></a></li>
+ {/pboot:list}
+ </ul>
+ </div>
+</div>
+<div class="clear"></div>
+<div class="main">
+ <div class="index_news_left">
+ <div>{pboot:sort scode=18} <a href="[sort:link]"><img src="{pboot:sitedomain}/skin/images/index_news_left.jpg" width="322" height="50" /></a>{/pboot:sort} </div>
+ <div class="index_ask">
+ <ul>
+ {pboot:list scode=18 num=3 order=date}
+ <li>
+  <div class="ask_title"><a href="[list:link]">[list:title]</a></div>
+  <div class="ask_content">&nbsp; &nbsp;[list:description len=40]...</div>
+ </li>
+ {/pboot:list}
+ </ul>
+ </div>
+ </div>
+ <div class="index_news_right">
+ <div>{pboot:sort scode=13} <a href="[sort:link]"><img src="{pboot:sitedomain}/skin/images/index_news_right.jpg" width="728" height="47" /></a>{/pboot:sort} </div>
+ {pboot:list scode=13 num=1 isico=1}
+ <div class="index_news_recc">
+ <div class="recc_news_img"><a href="[list:link]"><img src="[list:ico]"></a></div>
+ <div class="recc_news_right">
+ <div class="recc_news_right_title"><a href="[list:link]">[list:title]</a></div>
+ <div class="recc_news_right_jj">[list:description]...</div>
+ </div>
+ </div>
+ {/pboot:list}
+ <div class="clear"></div>
+ <div class="innews">
+ <ul>
+ {pboot:list scode=13 num=5 order=date}
+ <li><b>&middot;</b> <a href="[list:link]" title="[list:title]">[list:title]</a><span>[list:date style=Y-m-d]</span></li>
+ {/pboot:list}
+ </ul>
+ </div>
+ </div>
+</div>
+<div class="clear"></div>
+<div class="main">
+ <div class="links">{pboot:link num=30 gid=1}<a href="[link:link]" target="_blank">[link:name]</a> &nbsp;&nbsp;{/pboot:link}</div>
+</div>
+<div class="clear"></div>
+{include file=foot.html}
+</body>
+</html>

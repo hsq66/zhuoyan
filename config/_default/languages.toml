@@ -1,0 +1,69 @@
+############################# 中文 ################################
+[zh]
+languageName = "中文"
+languageCode = "zh-cn"
+contentDir = "content/zh"
+weight = 1
+
+# copyright
+copyright = "Copyright &copy; 2026 卓研团队"
+
+# banner
+[zh.params.banner]
+title = "卓研知识库与支持中心"
+subtitle = "快速找到您需要的答案和技术支持"
+bg_image = "images/banner.jpg"
+placeholder = "搜索您的问题..."
+
+# call to action
+[zh.params.cta]
+enable = true
+title = "没有找到您需要的答案？"
+content = "我们的支持团队随时准备为您提供帮助。"
+
+[zh.params.cta.button]
+enable = true
+label = "联系我们"
+link = "contact/"
+
+# navigation
+[[zh.menu.main]]
+name = "首页"
+url = ""
+weight = 1
+
+[[zh.menu.main]]
+name = "功能特性"
+url = "features"
+weight = 2
+
+[[zh.menu.main]]
+name = "安装指南"
+url = "installation"
+weight = 3
+
+[[zh.menu.main]]
+name = "常见问题"
+url = "faq"
+weight = 4
+
+[[zh.menu.main]]
+name = "联系我们"
+url = "contact"
+weight = 5
+
+# footer menu
+[[zh.menu.footer]]
+name = "关于我们"
+url = "about"
+weight = 1
+
+[[zh.menu.footer]]
+name = "隐私政策"
+url = "privacy"
+weight = 2
+
+[[zh.menu.footer]]
+name = "使用条款"
+url = "terms"
+weight = 3

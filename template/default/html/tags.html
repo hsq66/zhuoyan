@@ -1,0 +1,62 @@
+{include file=comm/head.html}
+
+<!-- head End --> 
+<!-- ym-banner start -->
+<section class="ny-banner text-center" style="background-image:url({pboot:sitetplpath}/images/2014091259957041.png)">
+  <div class="container text-left">
+    <h2>{sort:name} {sort:subname}<small>{sort:def1}</small></h2>
+    <p class="weizhi">当前位置：{pboot:position} </p>
+  </div>
+</section>
+<!-- ym-banner End --> 
+<!-- crumbs start -->
+<section class="crumbs text-right">
+  <div class="container">
+    <ul class="list-unstyled" id="nav">
+     	{pboot:nav parent={sort:tcode}}
+      <li><a href="[nav:link]" >[nav:name]</a></li>
+		{/pboot:nav}  
+    </ul>
+  </div>
+</section>
+<!-- crumbs End --> 
+<!-- content start -->
+<div class="neirong sx-padding container" id="demo">
+	{pboot:list num=5  scode=* order=date  page=1} 
+  <article class="ny-news clearfix wow animated fadeInUp">
+    <figure class="pull-left y-m50">
+		<a href="[list:link]" target="_blank">
+			<img src="[list:ico]" alt="[list:title]" />
+		</a>
+	  </figure>
+    <h1 class="nr-h20"><a href="[list:link]" target="_blank">[list:title mark=1]</a></h1>
+    <p class="shuoming x-m30">[list:description len=120]...</p>
+    <p>
+		<a href="[list:link]" class="btn-success" target="_blank">MORE INFO →</a> 
+		<small class="mulu"><a href='[list:sortlink]'>[list:sortname]</a></small> 
+		<small class="guanzhu">[list:visits]</small> 
+		<small class="time">[list:date style=Y-m-d]</small> 
+		<small class="news-qq"><a href="#">qq咨询</a></small> 
+		<small class="news-sq"><a href="#" target="_blank">商桥咨询</a></small>
+	  </p>
+  </article>
+	{/pboot:list}
+	{pboot:if({page:rows}>0)}
+     <div class="pages"> 
+		 <li>
+			 <span class="pageinfo"><a href="{page:index}">首页</a></span>
+			 <span class="pageinfo"><a href="{page:pre}">上一页</a></span>
+			  {page:numbar}
+			 <span class="pageinfo"><a href="{page:next}">下一页</a></span>
+			 <span class="pageinfo"><a href="{page:last}">尾页</a></span>		 
+		 </li>
+
+ </div>
+	{else}
+	 <div class="pages">未查询到任何数据！</div>
+	{/pboot:if}
+</div>
+<!-- content End --> 
+<!-- footer start --> 
+<!-- footer start -->
+{include file=foot.html}

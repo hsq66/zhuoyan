@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/base.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/x1my61.css">
+<style>
+#header {
+	background: #005F4A;
+}
+#footer {
+	color: #005F4A;
+	border-top: 1px solid #005F4A;
+}
+.widget-header > h2:before {
+	background: #005F4A;
+}
+.widget > .widget-footer > .more > .icon:before, .widget > .widget-footer > .more > .icon:after {
+	background: #005F4A;
+}
+.widget-textlist > .widget-body > .list > .list-item > a:before, .widget-mixlist > .widget-body > .list > .list-item.only-text > a:before {
+	background: #005F4A;
+}
+.widget-detaillist > .widget-body > .list > .list-item > a > .text-container > .title, .widget-mixlist > .widget-body > .list > .list-item.with-details > a > .text-container > .title {
+	color: #005F4A;
+}
+.widget-article > .widget-body > .article-title {
+	color: #005F4A;
+}
+.widget > .widget-footer > .more {
+	color: #ffffff;
+	border: 1px solid #005F4A;
+	background: #005F4A;
+}
+#menu > .menu {
+	background: #005F4A;
+}
+.widget-header {
+	background: #005F4A;
+	border-bottom: 1px solid #005F4A;
+}
+#company-title {
+	color: #005F4A;
+}
+.widget-detaillist > .widget-body > .list > .list-item:after, .widget-mixlist > .widget-body > .list > .list-item.with-details:after {
+	border-top: 2px solid #005F4A;
+	border-right: 2px solid #005F4A;
+}
+</style>
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/widget-pager.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/marketing.css">
+<style>
+#share-mask .tip {
+	background-color: #005F4A
+}
+</style>
+</head>
+<body>
+{include file=head.html}
+<div id="body">
+  <section id="main-list" class="widget widget-imagelist ">
+    <div class="widget-header">
+      <h2>{sort:name}</h2>
+    </div>
+    <div class="widget-body">
+      <ul class="list">
+        {pboot:list num=10 order=sorting}
+        <li class="list-item"> <a href="[list:link]">
+          <div class="image-container"> <img src="[list:ico]" alt="[list:title]"> </div>
+          <div class="title">[list:title]</div>
+          </a> </li>
+        {/pboot:list}
+      </ul>
+    </div>
+    <div class="widget-footer"> </div>
+  </section>
+  {pboot:if({page:rows}>0)}
+<div class="pagebar">
+<div class="pagination">
+<a class="page-item page-link st" href="{page:pre}" title="上一页"><<</a>
+{page:numbar}
+<a class="page-item page-link" href="javascript:;" title="当前页/总页数">{page:current}/{page:count}</a>
+<a class="page-item page-link st" href="{page:next}" title="下一页">>></a>
+</div>
+</div>	
+{else}
+<div class="tac text-secondary">本分类下无任何数据！</div>
+{/pboot:if}
+</div>
+{include file=foot.html}
+</body>
+</html>

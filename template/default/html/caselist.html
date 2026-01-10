@@ -1,0 +1,63 @@
+{include file=comm/head2.html}
+
+<!-- head End --> 
+<!-- ym-banner start -->
+<section class="ny-banner text-center" style="background-image:url({pboot:sitetplpath}/images/2014091259957041.png)">
+  <div class="container text-left">
+    <h2>{sort:name} {sort:subname}<small>{sort:def1}</small></h2>
+    <p class="weizhi">当前位置：{pboot:position} </p>
+  </div>
+</section>
+<!-- ym-banner End --> 
+<!-- crumbs start -->
+<section class="crumbs text-right">
+  <div class="container">
+    <ul class="list-unstyled">
+		{pboot:nav parent={sort:tcode}}
+      <li><a href="[nav:link]" >[nav:name]</a></li>
+		{/pboot:nav} 
+    </ul>
+  </div>
+</section>
+<!-- crumbs End --> 
+<!-- content start -->
+<div class="neirong">
+  <section class="case sx-padding" id="demo">
+    <div class="container">
+      <div class="row">
+		  {pboot:list  num=9}
+        <figure class="wow animated flipInX"> 
+			<a href="case-con.html" target="_blank">
+				<img src="[list:ico]" width="360" height="256" alt="[list:title]" />
+			</a>
+          <figcaption>
+            <h3><a href="case-con.html" title="[list:title]" target="_blank">[list:title]</a></h3>
+            <p>[list:description len=60]...</p>
+            <p class="case-more-top">
+				<a href="[list:link]" class="btn-success case-more" target="_blank">MORE INFO →</a> 查看：[list:visits]人</p>
+          </figcaption>
+        </figure>
+		  {/pboot:list}   
+      </div>
+
+	{pboot:if({page:rows}>0)}
+     <div class="pages"> 
+		 <li>
+			 <span class="pageinfo"><a href="{page:index}">首页</a></span>
+			 <span class="pageinfo"><a href="{page:pre}">上一页</a></span>
+			  {page:numbar}
+			 <span class="pageinfo"><a href="{page:next}">下一页</a></span>
+			 <span class="pageinfo"><a href="{page:last}">尾页</a></span>		 
+		 </li>
+
+ </div>
+	{else}
+	 <div class="pages">未查询到任何数据！</div>
+	{/pboot:if}
+    </div>
+  </section>
+</div>
+<!-- content End --> 
+<!-- footer start --> 
+<!-- footer start -->
+{include file=foot.html}

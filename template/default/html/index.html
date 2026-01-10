@@ -1,0 +1,146 @@
+{include file=comm/head.html}
+
+<!-- head End --> 
+<!-- banner start -->
+<div class="text-center">
+  <ul class="rslides list-unstyled">
+    {pboot:slide gid=1 num=6}
+	  
+	  <li>
+      <div class="banner" >
+	  <a href="[slide:link]">
+	  <img src="[slide:src]">
+	  </a>
+      </div>
+    </li>
+	  {/pboot:slide}      
+  
+  </ul>
+</div>
+<!-- banner End --> 
+<!-- kehu start -->
+<section style="background-image: url(images/2014092201299540.png);" class="kehu sx-padding text-center pingpu-bg" id="demo">
+  <div class="container">
+    <h2 class="f-title wow animated fadeInUp">自主式、探索式学习的桥梁，温馨私校、全球化视野！<small>安全、快速、贴心、无微不致</small></h2>
+	
+    <!--<div class="row">
+	<h2 class="f-title wow animated fadeInUp">展望未来、育人全面、自主学习、合作探究、互联互通</h2>
+		{pboot:list scode=14 num=12 order=date}
+      <figure class="wow animated flipInX">
+		  <img src="[list:ico]" width="188" height="100" alt="[list:title]"/>
+        <figcaption>[list:title]</figcaption>
+      </figure>
+		{/pboot:list}     
+    </div> -->
+    <p class="s-m40 wow animated fadeInUp">{pboot:sort scode=3}<a href="[sort:link]" class="btn-success about-more" target="_blank">MORE INFO →</a>{/pboot:sort}</p>
+  </div>
+</section>
+<!-- kehu end --> 
+<!-- fuwu start -->
+<section style="background-image: url({pboot:sitetplpath}/images/2014092200018883.jpg);" class="fuwu-bg pingpu-bg" id="demo">
+  <div class="fuwu container text-center sx-padding">
+    <h2 class="f-title wow animated fadeInUp">我们的优势 Our Advantages<small>创独一无二的设计，供源源不断的资源，拥丰富资深的经验</small></h2>
+    <div class="row">
+      <figure class="wow animated zoomIn"> <a href="https://www.greenmountainbay.com/service/" class="pic1"></a>
+        <figcaption><a href="https://www.greenmountainbay.com/service/">我们的课程 Our Programs</a></figcaption>
+        <p align="left">{label:sheji}</p>
+      </figure>
+      <figure class="bianju wow animated zoomIn"> <a href="https://www.greenmountainbay.com/case/" class="pic2" target="_blank"></a>
+        <figcaption><a href="https://www.greenmountainbay.com/case/">我们的资源 Our Resources</a></figcaption>
+        <p align="left">{label:ziyuan} </p>
+      </figure>
+      <figure class="wow animated zoomIn"> <a href="https://www.greenmountainbay.com/customer/" class="pic3" target="_blank"></a>
+        <figcaption><a href="https://www.greenmountainbay.com/customer/">我们的经验 Our Experience</a></figcaption>
+        <p align="left">{label:jingyan}</p>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- fuwu end --> 
+<!-- Anli start -->
+<section class="case text-center sx-padding" id="demo">
+  <div class="container">
+    <h2 class="f-title wow animated fadeInUp">展望未来、育人全面、自主学习、合作探究、互联互通<small>您就是唯一，令世界瞩目的唯一</small></h2>
+   
+	  <p class="fl-case wow animated fadeInUp"> 
+		   {pboot:sort scode=6,7,8}
+		<a href="[sort:link]">[sort:name]</a> 		 
+		  {/pboot:sort}
+	  </p>
+	  
+    <div class="row">
+      {pboot:list scode=6,7,8 num=6}
+		<figure class="wow animated flipInX"> 
+		  <a href="[list:link]" target="_blank">
+			  <img src="[list:ico]" width="360" height="256" alt="[list:title]"/>
+		  </a>
+        <figcaption>
+          <h3><a href="[list:link]" target="_blank">[list:title]</a></h3>
+          <p>[list:description len=60]...</p>
+          <p class="case-more-top">
+			  <a href="[list:link]" class="btn-success case-more" target="_blank">MORE INFO →</a> 查看：[list:visits]次</p>
+        </figcaption>
+      </figure>
+		{/pboot:list}
+    </div>
+  </div>
+</section>
+<!-- Anli end --> 
+<!-- about US start -->
+<div style="background-image: url({pboot:sitetplpath}/images/2014092201586924.jpg);" class="pingpu-bg">
+  <article id="demo" class="about container text-center sx-padding">
+    <h2 class="f-title wow animated fadeInUp">关于我们 About US<small>诚以载道，以信立本，合作共赢</small></h2>
+    <div class="about-us wow animated fadeInUp">
+      {pboot:content id=18}
+		<p>[content:content drophtml=1 dropblank=1 len=442 more='']</p>
+     {/pboot:content}
+      <div class="about-lianjie text-center">
+		  {pboot:sort scode=2}<a href="[sort:link]" class="ry" target="_blank">[sort:name][sort:subname]</a>{/pboot:sort}
+		  {pboot:sort scode=5}<a href="[sort:link]" class="td" target="_blank">[sort:name][sort:subname]</a>{/pboot:sort}
+		</div>
+    </div>
+  </article>
+</div>
+<!-- About US end --> 
+<!-- News start -->
+<div class="news" id="demo">
+  <div class="container sx-padding clearfix">
+    <section class="wow animated fadeInUp">
+      <h2>游学资讯 <small>Company News</small></h2>
+      <ul class="list-unstyled clearfix">
+        {pboot:list scode=9 num=6}
+		  <li>
+			<a href="[list:link]" title="“[list:title]" target="_blank" Style="Color:rgb(255;font-weight:bold;">[list:title]</a>
+			<small class="pull-right">[list:date style=m-d]</small>
+		  </li>
+		  {/pboot:list}        
+		  <li>			
+      </ul>
+      <p>{pboot:sort scode=9}<a href="[sort:link]" class="btn-success news-more" target="_blank">MORE INFO →</a>{/pboot:sort}</p>
+    </section>
+    <section class=" bianju wow animated fadeInUp">
+      <h2>教育资讯 <small>Industry News</small></h2>
+      <ul class="list-unstyled clearfix">
+        {pboot:list scode=10 num=6}
+		  <li><a href="[list:link]" title="[list:title]" target="_blank" Style="Color:rgb(255;font-weight:bold;">[list:title]</a><small class="pull-right">[list:date style=m-d]</small></li>
+		  {/pboot:list}   
+      </ul>
+      <p>{pboot:sort scode=10}<a href="[sort:link]" class="btn-success news-more" target="_blank">MORE INFO →</a>{/pboot:sort}</p>
+    </section>
+    <section class="wow animated fadeInUp">
+      <h2>硅谷资讯 <small>Expertise</small></h2>
+      <ul class="list-unstyled clearfix">
+		  {pboot:list scode=11 num=6}
+        <li><a href="[list:link]" title="[list:title]" target="_blank" Style="Color:rgb(255;font-weight:bold;">[list:title]</a><small class="pull-right">[list:date style=m-d]</small></li>
+		    {/pboot:list} 
+      </ul>
+      <p>{pboot:sort scode=11}<a href="[sort:link]" class="btn-success news-more" target="_blank">MORE INFO →</a>{/pboot:sort}</p>
+    </section>
+  </div>
+</div>
+<!-- News end --> 
+
+<!-- footer start --> 
+<!-- footer start -->
+
+{include file=foot.html}

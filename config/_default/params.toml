@@ -1,0 +1,59 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+
+# logo
+logo = "images/logo.png"
+logo_width = "200px"
+
+# OpenGraph / Twitter Card metadata
+description = "卓研知识库与技术支持中心"
+author = "卓研团队"
+image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
+
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+
+# search
+search = true
+
+# main sections
+mainSections = ["features", "installation"]
+
+# copyright
+copyright = "Copyright &copy; 2026 卓研团队"
+
+# Preloader
+[preloader]
+enable = false
+preloader = "" # use jpg, png, svg or gif format.
+
+# Navigation button
+[navigation_button]
+enable = true
+label = "开始使用"
+link = "installation"
+
+# cookies
+[cookies]
+enable = false
+expire_days = 2
+content = "本网站使用 cookies 来改善您的浏览体验。"
+button = "我知道了"
+
+# footer content
+footer_content = "卓研致力于为用户提供优质的技术支持和知识分享。"
+
+# footer logo
+footer_logo = "images/logo.png"
+
+# social icon
+[[social]]
+title = "GitHub"
+icon = "ti-github" # themify icon : https://themify.me/themify-icons
+link = "https://github.com/hsq66"
+
+[[social]]
+title = "Email"
+icon = "ti-email" # themify icon : https://themify.me/themify-icons
+link = "mailto:support@example.com"

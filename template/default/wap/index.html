@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/base.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/x1my61.css">
+<style>
+#header {
+	background: #005F4A;
+}
+#footer {
+	color: #005F4A;
+	border-top: 1px solid #005F4A;
+}
+.widget-header > h2:before {
+	background: #005F4A;
+}
+.widget > .widget-footer > .more > .icon:before, .widget > .widget-footer > .more > .icon:after {
+	background: #005F4A;
+}
+.widget-textlist > .widget-body > .list > .list-item > a:before, .widget-mixlist > .widget-body > .list > .list-item.only-text > a:before {
+	background: #005F4A;
+}
+.widget-detaillist > .widget-body > .list > .list-item > a > .text-container > .title, .widget-mixlist > .widget-body > .list > .list-item.with-details > a > .text-container > .title {
+	color: #005F4A;
+}
+.widget-article > .widget-body > .article-title {
+	color: #005F4A;
+}
+.widget > .widget-footer > .more {
+	color: #ffffff;
+	border: 1px solid #005F4A;
+	background: #005F4A;
+}
+#menu > .menu {
+	background: #005F4A;
+}
+.widget-header {
+	background: #005F4A;
+	border-bottom: 1px solid #005F4A;
+}
+#company-title {
+	color: #005F4A;
+}
+.widget-detaillist > .widget-body > .list > .list-item:after, .widget-mixlist > .widget-body > .list > .list-item.with-details:after {
+	border-top: 2px solid #005F4A;
+	border-right: 2px solid #005F4A;
+}
+</style>
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/widget-slider.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/marketing.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/swiper-bundle.min.css">
+<style>
+#share-mask .tip {
+	background-color: #005F4A
+}
+</style>
+</head>
+<body class="specialpage-home">
+{include file=head.html}
+<div id="body">
+  <section class="widget widget-slides widget-slides-dot">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        {pboot:slide gid=2 num=10}
+        <div class="swiper-slide"><img src="[slide:src]" width="100%"></div>
+        {/pboot:slide}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="{pboot:sitedomain}/m/js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+		  loop:true,
+		  autoplay:{
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </section>
+  {pboot:sort scode=1}
+  <section class="widget widget-textblock ">
+    <div class="widget-header">
+      <h2>[sort:name]</h2>
+    </div>
+    <div class="widget-body"> {pboot:content scode=1}[content:content drophtml=1 dropblank=1 len=160 more='...']{/pboot:content} </div>
+    <div class="widget-footer"> <a class="more" href="[sort:link]"><i class="icon"></i>更多</a> </div>
+  </section>
+  {/pboot:sort}
+  {pboot:sort scode=2}
+  <section class="widget widget-imagelist ">
+    <div class="widget-header">
+      <h2>[sort:name]</h2>
+    </div>
+    <div class="widget-body">
+      <ul class="list">
+        {pboot:list scode=[sort:scode] num=4 order=sorting}
+        <li class="list-item"> <a href="[list:link]">
+          <div class="image-container"> <img src="[list:ico]" alt="[list:title]"> </div>
+          <div class="title">[list:title]</div>
+          </a> </li>
+        {/pboot:list}
+      </ul>
+    </div>
+    <div class="widget-footer"> <a class="more" href="[sort:link]"><i class="icon"></i>更多</a> </div>
+  </section>
+  {/pboot:sort}
+  {pboot:sort scode=7}
+  <section class="widget widget-imagelist ">
+    <div class="widget-header">
+      <h2>[sort:name]</h2>
+    </div>
+    <div class="widget-body">
+      <ul class="list">
+        {pboot:list scode=[sort:scode] num=4 order=sorting}
+        <li class="list-item"> <a href="[list:link]">
+          <div class="image-container"> <img src="[list:ico]" alt="[list:title]"> </div>
+          <div class="title">[list:title]</div>
+          </a> </li>
+        {/pboot:list}
+      </ul>
+    </div>
+    <div class="widget-footer"> <a class="more" href="[sort:link]"><i class="icon"></i>更多</a> </div>
+  </section>
+  {/pboot:sort}
+  {pboot:sort scode=13}
+  <section class="widget widget-textlist ">
+    <div class="widget-header">
+      <h2>[sort:name]</h2>
+    </div>
+    <div class="widget-body">
+      <ul class="list">
+        {pboot:list scode=[sort:scode] num=5 order=sorting}
+        <li class="list-item"><a href="[list:link]"><span class="title">[list:title]</span>
+          <time class="pub-date">[list:date style=Y-m-d]</time>
+          </a></li>
+          {/pboot:list}
+      </ul>
+    </div>
+    <div class="widget-footer"> <a class="more" href="[sort:link]"><i class="icon"></i>更多</a> </div>
+  </section>
+  {/pboot:sort}
+</div>
+{include file=foot.html}
+</body>
+</html>

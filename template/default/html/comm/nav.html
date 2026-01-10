@@ -1,0 +1,26 @@
+<header class="header header-top" id="header">
+  <div class="container">
+    <h1><a href="{pboot:sitedomain}" class="logo pull-left">
+		<img src="{pboot:sitelogo}" width="156" height="58" alt="xx" />
+		</a>
+		<small class="pull-left">春骥咨询（双湾游学） <br />
+                                 中国大湾区对美国湾区</small></h1>
+								 
+								  <!--h2 class="f-title wow animated fadeInUp">自主式、探索式学习的桥梁，温馨私校、全球化视野！<small>安全、快速、贴心、无微不致</small></h2-->
+    <nav class="nav pull-right">		
+		<ul class="nav-bar list-unstyled pull-left" id="nav">
+        <li {pboot:if(0=='{sort:scode}')}class='active'{/pboot:if}><a href="{pboot:sitedomain}">春骥咨询</a></li>
+			    {pboot:nav}
+        <li {pboot:if('[nav:scode]'=='{sort:tcode}')}class="active"{/pboot:if} ><a href="[nav:link]">[nav:name]</a>
+       
+          <ul class="list-unstyled">
+			  {pboot:2nav parent=[nav:scode]}
+            <li><a href="[2nav:link]">[2nav:name]</a></li>
+			  {/pboot:2nav}
+          </ul>
+        </li>       
+		{/pboot:nav}
+      </ul>
+    </nav>
+  </div>
+</header>

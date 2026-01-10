@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{pboot:pagetitle}</title>
+<meta name="keywords" content="{content:keywords}" />
+<meta name="description" content="{content:description}" />
+<LINK rel=stylesheet type=text/css href="{pboot:sitedomain}/skin/css/style.css">
+</head>
+<body>
+<SCRIPT type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.js"></SCRIPT> 
+{include file=head.html}
+<div id="flash1"></div>
+<script>
+$(document).ready(function(){
+ $("#news").addClass("on");
+});
+</script>
+<div class="weizhi">
+ <div class="main">
+ <div class="position">您的位置：{pboot:position separator=>> }</div>
+ </div>
+</div>
+<div class="main">
+ <div class="content">
+ <div class="info_title">
+ <H1>{content:title}</H1>
+ </div>
+ <div class="news_other">日期：{content:date style='Y-m-d'}</div>
+ <div class="clear"></div>
+ <div class="info_content"> {content:content} </div>
+ <div class="info_next">{content:precontent}</div>
+ <div class="info_next"> {content:nextcontent} </div>
+ </div>
+</div>
+<div class="clear"></div>
+{include file=foot.html}
+</body>
+</html>

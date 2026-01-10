@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/base.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/x1my61.css">
+<style>
+#header {
+	background: #005F4A;
+}
+#footer {
+	color: #005F4A;
+	border-top: 1px solid #005F4A;
+}
+.widget-header > h2:before {
+	background: #005F4A;
+}
+.widget > .widget-footer > .more > .icon:before, .widget > .widget-footer > .more > .icon:after {
+	background: #005F4A;
+}
+.widget-textlist > .widget-body > .list > .list-item > a:before, .widget-mixlist > .widget-body > .list > .list-item.only-text > a:before {
+	background: #005F4A;
+}
+.widget-detaillist > .widget-body > .list > .list-item > a > .text-container > .title, .widget-mixlist > .widget-body > .list > .list-item.with-details > a > .text-container > .title {
+	color: #005F4A;
+}
+.widget-article > .widget-body > .article-title {
+	color: #005F4A;
+}
+.widget > .widget-footer > .more {
+	color: #ffffff;
+	border: 1px solid #005F4A;
+	background: #005F4A;
+}
+#menu > .menu {
+	background: #005F4A;
+}
+.widget-header {
+	background: #005F4A;
+	border-bottom: 1px solid #005F4A;
+}
+#company-title {
+	color: #005F4A;
+}
+.widget-detaillist > .widget-body > .list > .list-item:after, .widget-mixlist > .widget-body > .list > .list-item.with-details:after {
+	border-top: 2px solid #005F4A;
+	border-right: 2px solid #005F4A;
+}
+</style>
+<link rel="stylesheet" href="{pboot:sitedomain}/m/css/marketing.css">
+<style>
+#share-mask .tip {
+	background-color: #005F4A
+}
+</style>
+</head>
+<body>
+{include file=head.html}
+<div id="body">
+  <section class="widget widget-article ">
+    <div class="widget-body">
+      <h2 class="article-title">{sort:name}</h2>
+      <div class="ugc" id="maximg">
+        {content:content}
+      </div>
+      <div class="ugc quick-links"> </div>
+    </div>
+  </section>
+</div>
+{include file=foot.html}
+</body>
+</html>

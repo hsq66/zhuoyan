@@ -1,0 +1,33 @@
+{
+  "name": "zhuoyan-hugo",
+  "version": "1.0.0",
+  "description": "卓研知识库与支持中心 - 基于 Hugo 和 Dot 主题",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --disableFastRender --buildDrafts --buildFuture",
+    "build": "hugo --gc --minify",
+    "preview": "hugo server --disableFastRender",
+    "clean": "rm -rf public resources .hugo_build.lock"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsq66/zhuoyan.git"
+  },
+  "keywords": [
+    "hugo",
+    "documentation",
+    "knowledge-base",
+    "support-center"
+  ],
+  "author": "卓研团队",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsq66/zhuoyan/issues"
+  },
+  "homepage": "https://github.com/hsq66/zhuoyan#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0"
+  }
+}

@@ -1,0 +1,152 @@
+<footer style="background-image: url({pboot:sitetplpath}/images/2014092185736673.jpg);" class="pingpu-bg" id="yy">
+  <div id="demo" class="footer container sx-padding">
+    <div class="clearfix wow animated fadeIn">
+      <section>
+        <h3>联系预约 Online booking</h3>
+        <form action="{pboot:msgaction}" enctype="multipart/form-data" method="post" onSubmit="return CheckForm()" >
+          <ul class="list-unstyled">
+            <li>
+              <input name="xm" type="text" id="xm" value="" placeholder="您的尊称 Name" maxlength="10" onFocus="if (value =='您的尊称 Name'){value =''}" onBlur="if (value ==''){value='您的尊称 Name'}">
+            </li>
+            <li>
+              <input name="dh" type="text" id="dh" value="" placeholder="您的电话 Phone" maxlength="11" onFocus="if (value =='您的电话 Phone'){value =''}" onBlur="if (value ==''){value='您的电话 Phone'}">
+            </li>
+            <li>
+              <textarea name="nr" cols="" id="nr" value="" placeholder="您要留言的内容 Content" maxlength="200" onFocus="if (value =='您要留言的内容 Content'){value =''}" onBlur="if (value ==''){value='您要留言的内容 Content'}">您要留言的内容 Content</textarea>
+            </li>
+            <li>
+              <input name="button" type="submit" id="button" value="立即提交 Submit →">
+            </li>
+          </ul>
+        </form>
+        <div id="savediv" style="visibility:hidden;">处理中,请勿进行其他操作...</div>
+        <script language="javascript" type="text/javascript">
+function gosavenow(){
+savediv.style.visibility="visible";}
+</script> 
+        <script language="javascript" type="text/javascript">
+function CheckForm() {
+if(lansige.xm.value == '') {
+alert('对不起！请输入您的称呼！');
+lansige.xm.focus();
+return false;}   
+if(lansige.dh.value == '') {
+alert('对不起！请输入您的电话！');
+lansige.dh.focus();
+return false;}    
+var re = new RegExp("^([0-9])+$","ig");
+{if (!re.test(lansige.dh.value))
+{alert("对不起！电话只能是0-9的数字！");
+lansige.dh.focus();
+return false;}}
+if(lansige.nr.value == '') {
+alert('对不起！请输入您的留言内容(不超过200个字)！');
+lansige.nr.focus();
+return false;}  
+gosavenow();}
+</script> 
+      </section>
+      <section class="bianju">
+        <h3>联系我们 Contact US</h3>
+        <address>
+        <ul class="list-unstyled">
+		  <li>公司：深圳春骥咨询服务有限公司</li>
+          <li>地址：{pboot:companyaddress}</li>
+          <li>手机：{pboot:companymobile} </li>
+          <li>Q  Q：{pboot:companyqq}</li>
+          <li>E-mail：{pboot:companyemail}</li>
+        </ul>
+        </address>
+        <h4>快捷入口 Quick Entry</h4>
+        <p> 
+			{pboot:nav nav=parent}
+			<a href="[nav:link]" target="_blank">[nav:name]</a> / 
+			
+			{/pboot:nav}
+		  </p>
+        <p class="zhixun"> <a href="#" class="qq" target="_blank">在线QQ咨询</a> </p>
+      </section>
+      <section>
+        <h3>内容搜索 Search</h3>
+        <form name="formsearch" action="{pboot:scaction}">
+          <ul class="list-unstyled">
+            <li>
+              <input name="keyword" type="text" class="key" value="输入关键词 Keyword" placeholder="输入关键词 Keyword" onFocus="if (value =='输入关键词 Keyword'){value =''}" onBlur="if (value ==''){value='输入关键词 Keyword'}" />
+              <input type="submit" class="s-button" value="搜索" />
+            </li>
+          </ul>
+        </form>
+		<!--
+        <form method="post" target="_blank" action="#">
+          <ul class="list-unstyled">
+            <li class="mail-tx">输入邮箱定期接收我们的最新信息</li>
+            <li>
+              <input type="submit" class="m-button" value="提交">
+            </li>
+          </ul>
+        </form>
+		-->
+      </section>
+    </div>
+    <div class="yq-link">
+      <hr />
+      <p><strong>友情链接：</strong> 
+		  {pboot:link  gid=1 num=10}
+            <a href="[link:link]" target="_blank" title="[link:name]">[link:name]</a>
+          {/pboot:link}
+		  <small style="float: right;">友链申请QQ：{pboot:companyqq}</small>
+		</p>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="container clearfix">
+      <!--
+	  <p class="copy pull-left">{pboot:sitecopyright} <a href="/sitemap.xml" target="_blank">XML地图</a> <a href="https://www.greenmountainbay.com/" target="_blank">春骥咨询</a></p>
+	  -->
+	  <p class="copy pull-left">{pboot:sitecopyright} <a href="https://www.greenmountainbay.com/" target="_blank">春骥咨询</a></p>
+      <p class="renzheng pull-right text-right"> 
+	  <!--
+		  <img src="{pboot:sitetplpath}/images/2014090504144234.png" width="32" height="32" alt="工商合法注册企业" title="工商合法注册企业" /> 
+		  <img src="{pboot:sitetplpath}/images/2014090504203747.png" width="32" height="32" alt="安全网站" title="安全网站" /> 
+		  <img src="{pboot:sitetplpath}/images/2014090504244226.png" width="32" height="32" alt="网上报警" title="网上报警" /> 
+		  <img src="{pboot:sitetplpath}/images/2014090504278696.png" width="32" height="32" alt="中国建筑装饰协会会员" title="中国建筑装饰协会会员" /> 
+		  <img src="{pboot:sitetplpath}/images/2014090504317881.png" width="32" height="32" alt="中国建筑学会会员" title="中国建筑学会会员" /> </p>
+		  -->
+    </div>
+  </div>
+</footer>
+<!-- footer end --> 
+<!-- kehu start -->
+<div class="kefu">
+  <ul class="list-unstyled">
+    <li><a href="{pboot:sort scode=5}[sort:link]{/pboot:sort}" title="更多联系方式" target="_blank" class="kefu-lx">马上联系</a></li>
+    <li><a href="{pboot:sort scode=5}[sort:link]{/pboot:sort}" class="kefu-yy" title="快速预约设计" rel="nofollow">快速预约</a></li>
+    <li><a target="_blank" href="{pboot:sort scode=5}[sort:link]{/pboot:sort}" class="kefu-zx">在线咨询</a></li>
+    <li><a href="{pboot:sort scode=5}[sort:link]{/pboot:sort}" class="kefu-wx" title="官方微信" rel="nofollow">官方微信<span class="kefu-weixin">
+		<img src="{pboot:companyweixin}" width="140" height="140" alt=""/></span></a></li>
+    <li><a href="#top" class="kefu-top" title="回网页顶部" rel="nofollow">返回顶部</a></li>
+  </ul>
+</div>
+<!-- jQuery start --> 
+<script src="{pboot:sitetplpath}/js/jquery.min.js"></script> 
+<script src="{pboot:sitetplpath}/js/wow.min.js"></script> 
+<script>
+wow = new WOW(
+{animateClass: 'animated',
+offset:100});
+wow.init();
+document.getElementById('moar').onclick = function() {
+var section = document.createElement('section');
+section.className = 'section--purple wow fadeInDown';
+this.parentNode.insertBefore(section, this);};
+</script> 
+
+<!-- header up start --> 
+<script src="{pboot:sitetplpath}/js/headroom.min.js"></script> 
+<script src="{pboot:sitetplpath}/js/jquery.headroom.js"></script> 
+<script>$("#header").headroom();</script> 
+<!-- banner start --> 
+<script type="text/javascript" src="{pboot:sitetplpath}/js/jiaodiantu.js"></script> 
+<script type="text/javascript" src="{pboot:sitetplpath}/js/nav.hover.js"></script>
+</body>
+</html>

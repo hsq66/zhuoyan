@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{pboot:pagetitle}</title>
+<meta name="keywords" content="{pboot:pagekeywords}"/>
+<meta name="description" content="{pboot:pagedescription}"/>
+<LINK rel=stylesheet type=text/css href="{pboot:sitedomain}/skin/css/style.css">
+</head>
+<body>
+<SCRIPT type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.js"></SCRIPT> 
+{include file=head.html}
+<div id="flash1"></div>
+<script>
+$(document).ready(function(){
+ $("#product").addClass("on");
+});
+</script>
+<div class="weizhi">
+ <div class="main">
+ <div class="position">您的位置：{pboot:position separator=>> }</div>
+ </div>
+</div>
+<div class="main">
+ <div class="sort_list">{pboot:nav num=15 parent={sort:tcode}} <a href="[nav:link]" >[nav:name]</a> {/pboot:nav} </div>
+</div>
+<div class="main">
+ <div class="content">
+ <div class="ProductList">
+ <ul>
+ {pboot:list num=12 order=date}
+ <li>
+  <div class="Product_img"><a href="[list:link]"><img src="[list:ico]"></a></div>
+  <a href="[list:link]">[list:title]</a></li>
+ {/pboot:list}
+ </ul>
+ </div>
+ <div class="clear"></div>
+<style>
+.pagebar{padding:20px;overflow:hidden;clear:both}
+.pagebar .pagination{display:flex;justify-content:center;margin-top:10px}
+.pagination a{background:#fff;border:1px solid #ccc;color:#333;font-size:12px;padding:8px 10px;margin:0 2px;border-radius:3px;line-height:100%}
+.pagination span{color:#333;font-size:12px;padding:7px 2px;margin:0 2px;border-radius:3px}
+.pagination a:hover{color:#333;border:1px solid #333}
+.pagination a.page-num-current{color:#fff;background:#333;border:1px solid #333}
+.pagination .st{font-family:宋体}
+.text-secondary{text-align:center;padding:20px 0}</style>
+ {pboot:if({page:rows}>0)}
+<div class="pagebar">
+<div class="pagination">
+<a class="page-item page-link hidden-sm" href="{page:index}" title="首页">首页</a>
+<a class="page-item page-link st" href="{page:pre}" title="上一页"><<</a>
+{page:numbar}
+<a class="page-item page-link" href="javascript:;" title="当前页/总页数">{page:current}/{page:count}</a>
+<a class="page-item page-link st" href="{page:next}" title="下一页">>></a>
+<a class="page-item page-link hidden-sm" href="{page:last}" title="尾页">尾页</a>
+</div>
+</div>	
+{else}
+<div class="tac text-secondary">本分类下无任何数据！</div>
+{/pboot:if}
+
+ </div>
+</div>
+</div>
+<div class="clear"></div>
+{include file=foot.html}
+</body>
+</html>
