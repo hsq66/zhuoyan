@@ -2,7 +2,7 @@
 title: "卫星通信服务"
 date: 2024-01-10
 description: "80%地表覆盖的综合卫星通信物联解决方案，为偏远地区提供可靠的通信服务"
-image: "/images/index_about.jpg"
+image: "images/index_about.jpg"
 badge: "🛰️ 通信服务"
 users: "企业级服务"
 categories: ["卫星通信"]

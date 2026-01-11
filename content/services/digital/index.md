@@ -2,7 +2,7 @@
 title: "数字化咨询服务"
 date: 2024-01-10
 description: "工业4.0数字化信息咨询服务，助力企业数字化转型升级"
-image: "/images/index_about.jpg"
+image: "images/index_about.jpg"
 badge: "💼 咨询服务"
 users: "企业级服务"
 categories: ["数字化咨询"]

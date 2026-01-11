@@ -2,7 +2,7 @@
 title: "OLED护眼台灯"
 date: 2024-01-10
 description: "采用OLED发光材料，减少90%有害蓝光，RG0无危险等级，真正的健康照明"
-image: "/images/index_about.jpg"
+image: "images/index_about.jpg"
 badge: "💡 健康照明"
 users: "5万+家庭"
 categories: ["健康照明"]

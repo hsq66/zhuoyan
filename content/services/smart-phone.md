@@ -2,7 +2,7 @@
 title: "智慧学习手机 - 小嘢马"
 date: 2024-01-10
 description: "专为学习设计的智能手机，助学习、禁游戏、防沉迷，让家长放心，让学生专注"
-image: "/images/index_about.jpg"
+image: "images/index_about.jpg"
 badge: "📱 智能硬件"
 users: "10万+家庭"
 categories: ["智慧硬件"]

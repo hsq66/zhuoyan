@@ -2,7 +2,7 @@
 title: "鼎英语 - AI智能英语学习平台"
 date: 2024-01-10
 description: "助力全国50万+学员快速提升20~60分的颠覆性英语学习系统，基于AI技术的智能定制学习方案"
-image: "/images/index_about.jpg"
+image: "images/index_about.jpg"
 badge: "🏆 明星产品"
 users: "50万+用户"
 categories: ["AI智能教育"]
