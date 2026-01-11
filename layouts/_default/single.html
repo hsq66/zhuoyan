@@ -12,9 +12,7 @@
  <div class="info_title">
  <h1>{{ .Title }}</h1>
  </div>
- {{ if .Date }}
- <div class="news_other">日期：{{ .Date.Format "2006-01-02" }}</div>
- {{ end }}
+ <div class="news_other">日期：{{ now.Format "2006-01-02" }}</div>
  <div class="clear"></div>
  <div class="info_content">
   {{ .Content }}

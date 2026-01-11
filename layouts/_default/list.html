@@ -13,7 +13,7 @@
  <ul>
  {{ range .Pages }}
  <li>
-  <div class="news_title"><span>{{ .Date.Format "2006-01-02" }}</span><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+  <div class="news_title"><span>{{ now.Format "2006-01-02" }}</span><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
   <div class="news_jj">&nbsp; {{ .Summary | truncate 150 }}...<a href="{{ .RelPermalink }}" style="color:#cc0000;">【阅读全文】</a></div>
  </li>
  {{ end }}
