@@ -74,7 +74,7 @@ nav ul li a[href*="contact"]:hover {
 
 
 <div id="flash" style="width: 100%; margin: 0; padding: 0; position: relative; overflow: hidden;">
- <div class="banner-slider" style="position: relative; width: 100%; height: 500px;">
+ <div class="banner-slider" style="position: relative; width: 100%; height: 400px;">
   <div class="banner-slide active" style="background-image:url(/upload/image/20231212/1702372742874832.png); width: 100%; height: 100%; background-size: cover; background-position: center; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 1s ease-in-out;"></div>
   <div class="banner-slide" style="background-image:url(/upload/image/20231212/1702363142246975.png); width: 100%; height: 100%; background-size: cover; background-position: center; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;"></div>
   <div class="banner-slide" style="background-image:url(/upload/image/20240822/1724315752709181.png); width: 100%; height: 100%; background-size: cover; background-position: center; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;"></div>
@@ -87,40 +87,43 @@ nav ul li a[href*="contact"]:hover {
 </div>
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.banner-slide');
-const buttons = document.querySelectorAll('.banner_btn');
-const totalSlides = slides.length;
+if (typeof currentSlide === 'undefined') {
+ let currentSlide = 0;
+ const slides = document.querySelectorAll('.banner-slide');
+ const buttons = document.querySelectorAll('.banner_btn');
+ const totalSlides = slides.length;
 
-function showSlide(index) {
+ function showSlide(index) {
+  
+  slides.forEach(slide => {
+   slide.style.opacity = '0';
+  });
+  
+  
+  buttons.forEach(btn => {
+   btn.style.opacity = '0.5';
+   btn.classList.remove('current');
+  });
+  
+  
+  slides[index].style.opacity = '1';
+  buttons[index].style.opacity = '1';
+  buttons[index].classList.add('current');
+  
+  currentSlide = index;
+ }
+
  
- slides.forEach(slide => {
-  slide.style.opacity = '0';
- });
+ function autoSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+ }
+
  
- 
- buttons.forEach(btn => {
-  btn.style.opacity = '0.5';
-  btn.classList.remove('current');
- });
- 
- 
- slides[index].style.opacity = '1';
- buttons[index].style.opacity = '1';
- buttons[index].classList.add('current');
- 
- currentSlide = index;
+ setInterval(autoSlide, 5000);
 }
-
-
-function autoSlide() {
- currentSlide = (currentSlide + 1) % totalSlides;
- showSlide(currentSlide);
-}
-
-
-setInterval(autoSlide, 5000);
 </script>
+
 
 
 <div class="main" style="margin-top: 50px; margin-bottom: 60px;">
