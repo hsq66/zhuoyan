@@ -12,7 +12,7 @@ OLED采用特殊发光材料，藉由降低蓝光与改变蓝光比例，来减�
 
 OLED护眼台灯是一种利用 OLED 技术的出色创意！利用 **OLED（Organic Light Emitting Diode 有机发光二极管）**技术可以提供柔和、均匀的光线，护眼效果更好。
 
-![OLED护眼台灯](/static/upload/image/20240822/1724324980857764.png)
+![OLED护眼台灯](/upload/image/20240822/1724324980857764.png)
 
 ## 为什么选择OLED护眼台灯？
 
