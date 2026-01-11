@@ -1,10 +1,12 @@
-baseURL = "https://hsq66.github.io/zhuoyan/"
+baseURL = "https://www.zhuoyan.hn.cn/"
 languageCode = "zh-CN"
 title = "海南卓炎科技有限责任公司"
 # theme = "dot-hugo"  # 暂时禁用主题，使用Hugo默认布局
 defaultContentLanguage = "zh"
 enableRobotsTXT = true
 enableGitInfo = false
+relativeURLs = false
+canonifyURLs = false
 
 [pagination]
   pagerSize = 6
@@ -22,8 +24,8 @@ enableGitInfo = false
   address = "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室"
   phone = "18923719468"
   email = "axel@long.kim"
-  copyright = "© 2024 海南卓炎科技有限责任公司 版权所有"
-  icp = "琼ICP备xxxxxxxx号"
+  copyright = "© 2026 海南卓炎科技有限责任公司 版权所有"
+  icp = "琼ICP备2023007807号"
   
   # 分支机构
   shenzhen_hq = "广东省深圳市龙岗区龙城街道办龙平西路137号祥情世纪城市广场二楼"
