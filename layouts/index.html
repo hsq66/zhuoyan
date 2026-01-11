@@ -1,13 +1,7 @@
 {{ define "main" }}
 <script type="text/javascript" src="{{ "js/front1.js" | relURL }}"></script>
 
-<!-- Banner轮播 -->
-<div id="flash" style="margin-bottom: 0;">
- <div class="banner_1 banner" style="background-image:url({{ "upload/image/20231212/1702372742874832.png" | relURL }}); height: 450px; background-size: cover; background-position: center;"></div>
- <div class="banner_bar">
-  <a class="banner_btn current" href="javascript:void(0);" num="1"></a>
- </div>
-</div>
+{{ partial "banner.html" . }}
 
 <!-- 核心业务展示区 -->
 <div class="main" style="margin-top: 50px; margin-bottom: 60px;">
