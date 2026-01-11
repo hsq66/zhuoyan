@@ -11,182 +11,192 @@
 
 <div class="clear"></div>
 
-<!-- 产品展示区 -->
-<div class="main">
- <div class="inproduct_left">
- <div><img src="{{ "images/inproduct_left.gif" | relURL }}" width="222" height="80" /></div>
- <div class="insort">
- <ul>
-  <li><a href="{{ "services/ai-english/" | relURL }}">鼎英语-AI智能英语</a></li>
-  <li><a href="{{ "services/smart-phone/" | relURL }}">智慧学习手机</a></li>
-  <li><a href="{{ "services/oled-lamp/" | relURL }}">OLED护眼台灯</a></li>
- </ul>
- <div class="insort_more"><a href="{{ "services/" | relURL }}"><img src="{{ "images/isortmore.gif" | relURL }}" width="192" height="52" /></a></div>
- </div>
- <div><img src="{{ "images/ips_bottom.gif" | relURL }}" width="222" height="9" /></div>
+<!-- 核心业务展示区 -->
+<div class="main" style="margin-top: 40px; margin-bottom: 60px;">
+ <div style="text-align: center; margin-bottom: 40px;">
+  <h2 style="font-size: 36px; color: #005f4a; margin-bottom: 15px;">核心业务</h2>
+  <p style="font-size: 18px; color: #666;">五大核心领域，为50万+用户提供专业服务</p>
  </div>
  
- <div class="inproduct_right">
- <ul>
-  {{ $services := where .Site.RegularPages "Section" "services" }}
-  {{ range first 6 $services }}
-  <li>
-   <div class="ipdiv"><a href="{{ .RelPermalink }}" title="{{ .Title }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}"></a></div>
-   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
- </ul>
+ <!-- 五大核心产品卡片 -->
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px;">
+  
+  <!-- 1. 鼎英语 - AI智能英语 -->
+  <div class="product-card" style="background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%); border-radius: 12px; padding: 30px; color: #fff; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.15); transition: all 0.3s ease; position: relative; overflow: hidden;">
+   <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+   <div style="font-size: 48px; margin-bottom: 15px; position: relative; z-index: 1;">🎓</div>
+   <h3 style="font-size: 24px; margin-bottom: 10px; color: #fff; position: relative; z-index: 1;">鼎英语</h3>
+   <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.95; position: relative; z-index: 1;">AI智能英语学习系统</p>
+   <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 8px; margin-bottom: 15px; position: relative; z-index: 1;">
+    <strong style="font-size: 20px; color: #fff;">50万+</strong><br>
+    <span style="font-size: 12px; opacity: 0.9;">学员快速提升20-60分</span>
+   </div>
+   <a href="{{ "services/ai-english/" | relURL }}" style="display: inline-block; background: #fff; color: #005f4a; padding: 10px 25px; border-radius: 25px; font-weight: bold; text-decoration: none; transition: all 0.3s; position: relative; z-index: 1;">了解详情 →</a>
+  </div>
+  
+  <!-- 2. 智慧学习手机 -->
+  <div class="product-card" style="background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); border-radius: 12px; padding: 30px; color: #fff; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.15); transition: all 0.3s ease; position: relative; overflow: hidden;">
+   <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+   <div style="font-size: 48px; margin-bottom: 15px; position: relative; z-index: 1;">📱</div>
+   <h3 style="font-size: 24px; margin-bottom: 10px; color: #fff; position: relative; z-index: 1;">智慧学习手机</h3>
+   <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.95; position: relative; z-index: 1;">小嘢马 - 专为学习设计</p>
+   <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 8px; margin-bottom: 15px; position: relative; z-index: 1;">
+    <strong style="font-size: 16px; color: #fff;">助学习 · 禁游戏</strong><br>
+    <span style="font-size: 12px; opacity: 0.9;">防沉迷智能管控</span>
+   </div>
+   <a href="{{ "services/smart-phone/" | relURL }}" style="display: inline-block; background: #fff; color: #1976D2; padding: 10px 25px; border-radius: 25px; font-weight: bold; text-decoration: none; transition: all 0.3s; position: relative; z-index: 1;">了解详情 →</a>
+  </div>
+  
+  <!-- 3. OLED护眼台灯 -->
+  <div class="product-card" style="background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%); border-radius: 12px; padding: 30px; color: #fff; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.15); transition: all 0.3s ease; position: relative; overflow: hidden;">
+   <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+   <div style="font-size: 48px; margin-bottom: 15px; position: relative; z-index: 1;">💡</div>
+   <h3 style="font-size: 24px; margin-bottom: 10px; color: #fff; position: relative; z-index: 1;">OLED护眼台灯</h3>
+   <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.95; position: relative; z-index: 1;">健康照明新标准</p>
+   <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 8px; margin-bottom: 15px; position: relative; z-index: 1;">
+    <strong style="font-size: 20px; color: #fff;">减少90%</strong><br>
+    <span style="font-size: 12px; opacity: 0.9;">有害蓝光 RG0无危险</span>
+   </div>
+   <a href="{{ "services/oled-lamp/" | relURL }}" style="display: inline-block; background: #fff; color: #F57C00; padding: 10px 25px; border-radius: 25px; font-weight: bold; text-decoration: none; transition: all 0.3s; position: relative; z-index: 1;">了解详情 →</a>
+  </div>
+  
+  <!-- 4. 卫星通信服务 -->
+  <div class="product-card" style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); border-radius: 12px; padding: 30px; color: #fff; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.15); transition: all 0.3s ease; position: relative; overflow: hidden;">
+   <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+   <div style="font-size: 48px; margin-bottom: 15px; position: relative; z-index: 1;">🛰️</div>
+   <h3 style="font-size: 24px; margin-bottom: 10px; color: #fff; position: relative; z-index: 1;">卫星通信服务</h3>
+   <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.95; position: relative; z-index: 1;">全球覆盖通信解决方案</p>
+   <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 8px; margin-bottom: 15px; position: relative; z-index: 1;">
+    <strong style="font-size: 20px; color: #fff;">80%</strong><br>
+    <span style="font-size: 12px; opacity: 0.9;">地表覆盖率</span>
+   </div>
+   <a href="{{ "services/satellite/" | relURL }}" style="display: inline-block; background: #fff; color: #7B1FA2; padding: 10px 25px; border-radius: 25px; font-weight: bold; text-decoration: none; transition: all 0.3s; position: relative; z-index: 1;">了解详情 →</a>
+  </div>
+  
+  <!-- 5. 数字化咨询 -->
+  <div class="product-card" style="background: linear-gradient(135deg, #607D8B 0%, #455A64 100%); border-radius: 12px; padding: 30px; color: #fff; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.15); transition: all 0.3s ease; position: relative; overflow: hidden;">
+   <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+   <div style="font-size: 48px; margin-bottom: 15px; position: relative; z-index: 1;">💼</div>
+   <h3 style="font-size: 24px; margin-bottom: 10px; color: #fff; position: relative; z-index: 1;">数字化咨询</h3>
+   <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.95; position: relative; z-index: 1;">工业4.0数字化转型</p>
+   <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 8px; margin-bottom: 15px; position: relative; z-index: 1;">
+    <strong style="font-size: 16px; color: #fff;">专业咨询</strong><br>
+    <span style="font-size: 12px; opacity: 0.9;">信息化管理解决方案</span>
+   </div>
+   <a href="{{ "services/digital/" | relURL }}" style="display: inline-block; background: #fff; color: #455A64; padding: 10px 25px; border-radius: 25px; font-weight: bold; text-decoration: none; transition: all 0.3s; position: relative; z-index: 1;">了解详情 →</a>
+  </div>
+  
+ </div>
+ 
+ <!-- 查看更多按钮 -->
+ <div style="text-align: center; margin-top: 30px;">
+  <a href="{{ "services/" | relURL }}" style="display: inline-block; background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%); color: #fff; padding: 15px 50px; border-radius: 30px; font-size: 18px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 16px rgba(0,95,74,0.3); transition: all 0.3s;">
+   查看全部产品与解决方案 →
+  </a>
  </div>
 </div>
 
+<style>
+.product-card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 12px 32px rgba(0,0,0,0.25) !important;
+}
+.product-card a:hover {
+ transform: scale(1.05);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+</style>
+
 <div class="clear"></div>
 
-<!-- 关于我们 & 荣誉资质 -->
-<div class="abpro">
- <div class="main">
- <div class="index_about">
- <div><a href="{{ "pages/about/" | relURL }}"><img src="{{ "images/index_about.png" | relURL }}" width="732" height="74" /></a></div>
- <div class="index_about_jj">
-  <img src="{{ "images/index_about.jpg" | relURL }}" width="278" height="191" />
-  {{ with .Site.GetPage "pages/about" }}
-   {{ .Summary }}
-  {{ else }}
-   <span style="font-size: 16px;">卓炎科技</span>是一家立足于人工智能，智慧教育，健康生活，致力于让我们年轻一代享学习成长与智慧规划的科技型创新与咨询服务公司。同时基于信息物联通信，新型的发光材料，研究与拓展塑造低碳、环保、节能的照明第四代新型科技应用产品，服务我们美好的舒适生活。
-  {{ end }}
- </div>
- </div>
- 
- <div class="index_honor">
- <div><a href="{{ "honors/" | relURL }}"><img src="{{ "images/index_honor.png" | relURL }}" width="329" height="74" /></a></div>
- <div class="productshow1">
- <div class="scrollcontainer">
-  <ul>
-  {{ $honors := where .Site.RegularPages "Section" "honors" }}
-  {{ range first 10 $honors }}
-  <li><a href="{{ .RelPermalink }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="233" height="140"><br>{{ .Title }}</a></li>
-  {{ end }}
-  </ul>
- </div>
- <a class="abtn aright" href="#right">右移</a>
- <a class="abtn aleft" href="#left">左移</a>
- </div>
- <script type="text/javascript" src="{{ "js/xslider.js" | relURL }}"></script>
- <script type="text/javascript">
-  $(function(){
-  $(".productshow1:eq(0)").Xslider({
-   unitdisplayed:3,
-   numtoMove:1,
-   autoscroll:3000,
-   loop:"cycle"
-  });
-  $("a").focus(function(){this.blur();});
-  })
- </script>
- </div>
- </div>
- 
- <div class="clear"></div>
- 
- <!-- 产品轮播 -->
- <div class="main">
- <script type="text/javascript" src="{{ "js/xslider.js" | relURL }}"></script>
- <div class="productshow">
- <div class="scrollcontainer">
- <ul>
-  {{ $services := where .Site.RegularPages "Section" "services" }}
-  {{ range first 10 $services }}
-  <li><a href="{{ .RelPermalink }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="233" height="140"><br>{{ .Title }}</a></li>
-  {{ end }}
- </ul>
- </div>
- <a class="abtn aright" href="#right" style="display:none">右移</a>
- <a class="abtn aleft" href="#left" style="display:none">左移</a>
- </div>
- <script type="text/javascript">
-$(function(){
-	$(".productshow:eq(0)").Xslider({
-		unitdisplayed:3,
-		numtoMove:1,
-		autoscroll:2500,
-		loop:"cycle"
-	});
-	$("a").focus(function(){this.blur();});
-})
-</script>
+<!-- 关于我们 -->
+<div class="main" style="margin: 60px auto; padding: 50px; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+  <div>
+   <h2 style="font-size: 32px; color: #005f4a; margin-bottom: 20px;">关于卓炎科技</h2>
+   <p style="font-size: 16px; line-height: 2; color: #333; margin-bottom: 20px;">
+    <strong style="color: #005f4a;">卓炎科技</strong>是一家立足于人工智能、智慧教育、健康生活的科技型创新与咨询服务公司。
+   </p>
+   <p style="font-size: 16px; line-height: 2; color: #666; margin-bottom: 25px;">
+    我们致力于让年轻一代享受学习成长与智慧规划，同时基于信息物联通信和新型发光材料，研究与拓展低碳、环保、节能的第四代照明科技应用产品。
+   </p>
+   <a href="{{ "pages/about/" | relURL }}" style="display: inline-block; background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%); color: #fff; padding: 12px 35px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s;">
+    了解更多 →
+   </a>
+  </div>
+  <div style="text-align: center;">
+   <img src="{{ "images/index_about.jpg" | relURL }}" style="max-width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+  </div>
  </div>
 </div>
 
 <div class="clear"></div>
 
 <!-- 成功案例 -->
-<div class="main">
- <div class="in_project_title"><img src="{{ "images/in_project.jpg" | relURL }}" width="687" height="60" /></div>
- {{ $cases := where .Site.RegularPages "Section" "cases" }}
- {{ with index $cases 0 }}
- <div class="in_project_left"><a href="{{ .RelPermalink }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="445" height="379"></a></div>
- {{ end }}
- <div class="in_project_right">
- <ul>
- {{ range after 1 (first 7 $cases) }}
- <li><a href="{{ .RelPermalink }}" title="{{ .Title }}"><img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" width="196" height="178"></a></li>
- {{ end }}
- </ul>
+<div class="main" style="margin: 60px auto;">
+ <div style="text-align: center; margin-bottom: 40px;">
+  <h2 style="font-size: 36px; color: #005f4a; margin-bottom: 15px;">成功案例</h2>
+  <p style="font-size: 18px; color: #666;">真实案例见证实力</p>
+ </div>
+ 
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+  {{ $cases := where .Site.RegularPages "Section" "cases" }}
+  {{ range first 6 $cases }}
+  <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s;">
+   <div style="height: 200px; overflow: hidden;">
+    <a href="{{ .RelPermalink }}">
+     <img src="{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ "images/index_about.jpg" | relURL }}{{ end }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s;">
+    </a>
+   </div>
+   <div style="padding: 20px;">
+    <h4 style="font-size: 18px; color: #005f4a; margin-bottom: 10px;">
+     <a href="{{ .RelPermalink }}" style="color: #005f4a; text-decoration: none;">{{ .Title }}</a>
+    </h4>
+    <p style="color: #666; font-size: 14px; line-height: 1.6;">{{ .Summary | truncate 80 }}</p>
+   </div>
+  </div>
+  {{ end }}
+ </div>
+ 
+ <div style="text-align: center; margin-top: 40px;">
+  <a href="{{ "cases/" | relURL }}" style="display: inline-block; background: #fff; color: #005f4a; border: 2px solid #005f4a; padding: 12px 40px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s;">
+   查看更多案例 →
+  </a>
  </div>
 </div>
 
 <div class="clear"></div>
 
 <!-- 新闻动态 -->
-<div class="main">
- <div class="index_news_left">
- <div><a href="{{ "news/faq/" | relURL }}"><img src="{{ "images/index_news_left.jpg" | relURL }}" width="322" height="50" /></a></div>
- <div class="index_ask">
- <ul>
- {{ $faq := where .Site.RegularPages "Section" "news" }}
- {{ range first 3 $faq }}
- <li>
-  <div class="ask_title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-  <div class="ask_content">&nbsp; &nbsp;{{ .Summary | truncate 40 }}...</div>
- </li>
- {{ end }}
- </ul>
- </div>
+<div class="main" style="margin: 60px auto;">
+ <div style="text-align: center; margin-bottom: 40px;">
+  <h2 style="font-size: 36px; color: #005f4a; margin-bottom: 15px;">新闻动态</h2>
+  <p style="font-size: 18px; color: #666;">了解最新资讯</p>
  </div>
  
- <div class="index_news_right">
- <div><a href="{{ "news/" | relURL }}"><img src="{{ "images/index_news_right.jpg" | relURL }}" width="728" height="47" /></a></div>
- {{ $news := where .Site.RegularPages "Section" "news" }}
- {{ $newsWithImage := where $news ".Params.image" "!=" nil }}
- {{ with index $newsWithImage 0 }}
- <div class="index_news_recc">
- <div class="recc_news_img"><a href="{{ .RelPermalink }}"><img src="{{ .Params.image | relURL }}"></a></div>
- <div class="recc_news_right">
- <div class="recc_news_right_title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
- <div class="recc_news_right_jj">{{ .Summary | truncate 100 }}...</div>
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+  {{ $news := where .Site.RegularPages "Section" "news" }}
+  {{ range first 3 $news }}
+  <div style="background: #fff; border-radius: 12px; padding: 25px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s;">
+   <div style="color: #999; font-size: 14px; margin-bottom: 10px;">{{ .Date.Format "2006-01-02" }}</div>
+   <h4 style="font-size: 18px; color: #005f4a; margin-bottom: 15px; line-height: 1.6;">
+    <a href="{{ .RelPermalink }}" style="color: #005f4a; text-decoration: none;">{{ .Title }}</a>
+   </h4>
+   <p style="color: #666; font-size: 14px; line-height: 1.8;">{{ .Summary | truncate 100 }}...</p>
+   <a href="{{ .RelPermalink }}" style="display: inline-block; margin-top: 15px; color: #005f4a; font-weight: bold; text-decoration: none;">
+    阅读更多 →
+   </a>
+  </div>
+  {{ end }}
  </div>
- </div>
- {{ end }}
- <div class="clear"></div>
- <div class="innews">
- <ul>
- {{ range first 5 $news }}
- <li><b>&middot;</b> <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a><span>{{ .Date.Format "2006-01-02" }}</span></li>
- {{ end }}
- </ul>
- </div>
+ 
+ <div style="text-align: center; margin-top: 40px;">
+  <a href="{{ "news/" | relURL }}" style="display: inline-block; background: #fff; color: #005f4a; border: 2px solid #005f4a; padding: 12px 40px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s;">
+   查看更多新闻 →
+  </a>
  </div>
 </div>
 
 <div class="clear"></div>
-
-<!-- 友情链接 -->
-<div class="main">
- <div class="links">
-  <a href="https://www.zhuoyan.tech" target="_blank">卓炎科技</a> &nbsp;&nbsp;
-  <a href="{{ "services/ai-english/" | relURL }}">鼎英语</a> &nbsp;&nbsp;
-  <a href="{{ "services/smart-phone/" | relURL }}">智慧学习手机</a> &nbsp;&nbsp;
-  <a href="{{ "services/oled-lamp/" | relURL }}">OLED护眼台灯</a> &nbsp;&nbsp;
- </div>
-</div>
 
 {{ end }}
