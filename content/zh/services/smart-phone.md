@@ -5,7 +5,7 @@ keywords: ["智慧学习手机", "学生手机", "防沉迷手机", "家长管�
 date: 2024-01-10
 draft: false
 weight: 2
-image: "/static/upload/image/20240822/1724324452204030.png"
+image: "/upload/image/20240822/1724324452204030.png"
 ---
 
 ![小嘢马学习手机](/uploads/allimg/170609/133R4KU-0.jpg)

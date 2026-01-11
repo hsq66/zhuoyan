@@ -2,6 +2,7 @@
 title: "数字化咨询服务"
 description: "工业4.0时代的数字化转型专家"
 weight: 5
+image: "/upload/image/20240822/1724316706849510.png"
 ---
 
 ## 数字化咨询服务

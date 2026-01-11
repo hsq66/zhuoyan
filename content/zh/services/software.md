@@ -2,6 +2,7 @@
 title: "软件开发服务"
 description: "专业的定制化软件开发"
 weight: 6
+image: "/upload/image/20240822/1724316541319512.jpg"
 ---
 
 ## 软件开发服务

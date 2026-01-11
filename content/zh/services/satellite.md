@@ -2,6 +2,7 @@
 title: "卫星通信服务"
 description: "全新卫星通信物联综合解决方案"
 weight: 4
+image: "/upload/image/20240822/1724316687725445.png"
 ---
 
 ## 卫星通信服务
