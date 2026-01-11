@@ -1,12 +1,165 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+<meta name="format-detection" content="telephone=no"/>
+
+<!-- 基础SEO -->
+<title>{{ if .IsHome }}{{ .Site.Title }} - {{ .Site.Params.description }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
 <meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else }}{{ .Site.Params.keywords }}{{ end }}"/>
+<meta name="author" content="{{ .Site.Params.author }}"/>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+<link rel="canonical" href="{{ .Permalink }}"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}"/>
+<meta property="og:url" content="{{ .Permalink }}"/>
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}"/>
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ if .Params.image }}{{ .Params.image }}{{ else }}{{ .Site.Params.seo.og_image }}{{ end }}"/>
+<meta property="og:site_name" content="{{ .Site.Params.seo.site_name }}"/>
+<meta property="og:locale" content="{{ .Site.Params.seo.locale }}"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="{{ .Site.Params.seo.twitter_card }}"/>
+<meta name="twitter:site" content="{{ .Site.Params.seo.twitter_site }}"/>
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}"/>
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
+<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ if .Params.image }}{{ .Params.image }}{{ else }}{{ .Site.Params.seo.og_image }}{{ end }}"/>
+
+<!-- 结构化数据 - Organization -->
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ .Site.Params.organization.name }}",
+  "legalName": "{{ .Site.Params.organization.legal_name }}",
+  "url": "{{ .Site.Params.organization.url }}",
+  "logo": "{{ .Site.BaseURL }}{{ .Site.Params.organization.logo }}",
+  "foundingDate": "{{ .Site.Params.organization.founding_date }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ .Site.Params.organization.telephone }}",
+    "contactType": "{{ .Site.Params.organization.contact_type }}",
+    "email": "{{ .Site.Params.organization.email }}",
+    "areaServed": "{{ .Site.Params.organization.area_served }}",
+    "availableLanguage": ["zh-CN"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "CN",
+    "addressRegion": "海南省",
+    "addressLocality": "澄迈县",
+    "streetAddress": "{{ .Site.Params.address }}"
+  },
+  "sameAs": {{ .Site.Params.organization.same_as }},
+  "description": "{{ .Site.Params.description }}"
+}
+</script>
+
+<!-- 结构化数据 - WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.description }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.organization.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}{{ .Site.Params.organization.logo }}"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{ end }}
+
+{{ if not .IsHome }}
+<!-- 结构化数据 - BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "{{ .Site.BaseURL }}"
+    }{{ if .Section }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Section | humanize }}",
+      "item": "{{ .Site.BaseURL }}{{ .Section }}/"
+    }{{ end }},
+    {
+      "@type": "ListItem",
+      "position": {{ if .Section }}3{{ else }}2{{ end }},
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+
+<!-- 结构化数据 - Article -->
+{{ if eq .Section "news" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}",
+  "image": "{{ .Site.BaseURL }}{{ if .Params.image }}{{ .Params.image }}{{ else }}{{ .Site.Params.seo.og_image }}{{ end }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.organization.name }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.organization.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}{{ .Site.Params.organization.logo }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}"/>
+<link rel="apple-touch-icon" href="{{ "images/logo.png" | relURL }}"/>
+
+<!-- Stylesheets -->
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/modern-enhancements.css" | relURL }}">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+<!-- Scripts -->
 <script type="text/javascript" src="{{ "js/jquery-1.5.1.min.js" | relURL }}"></script>
 <script type="text/javascript" src="{{ "js/jquery.js" | relURL }}"></script>
 </head>
@@ -18,5 +171,9 @@
 
 <div class="clear"></div>
 {{ partial "footer.html" . }}
+
+<!-- 百度统计代码位置 -->
+<!-- 可在此处添加百度统计、Google Analytics等 -->
+
 </body>
 </html>

@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
 
 <div class="weizhi">
  <div class="main">
@@ -26,5 +27,33 @@
  {{ end }}
  </div>
 </div>
+
+<style>
+/* 联系表单样式优化 */
+.info_content form input:focus,
+.info_content form select:focus,
+.info_content form textarea:focus {
+  outline: none;
+  border-color: #005f4a !important;
+  box-shadow: 0 0 0 3px rgba(0, 95, 74, 0.1);
+}
+
+.info_content form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 95, 74, 0.3);
+}
+
+.info_content form button:active {
+  transform: translateY(0);
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .info_content > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+}
+</style>
 
 {{ end }}

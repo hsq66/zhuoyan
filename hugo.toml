@@ -32,8 +32,33 @@ canonifyURLs = false
   shenzhen_market = "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼五楼1001室"
   shenzhen_rd = "广东省深圳市南山区粤海街道海天一路11号软件产业基地5栋A座4栋433"
   
-  # SEO
-  keywords = "AI英语,智能学习,鼎英语,智慧学习手机,OLED护眼台灯,卫星通信,数字化咨询,智慧教育,健康照明"
+  # SEO - 优化关键词策略
+  keywords = "AI英语,鼎英语,英语提分,智能学习,在线英语学习,英语培训,少儿英语,成人英语,英语口语,英语听力,智慧学习手机,学生手机,防沉迷手机,家长管控手机,OLED护眼台灯,护眼灯,学习台灯,无蓝光台灯,儿童台灯,卫星通信,物联网,卫星电话,应急通信,数字化咨询,数字化转型,智慧教育,在线教育,教育科技,EdTech,健康照明,智能照明,海南科技公司,深圳科技公司,教育培训机构,AI教育,人工智能教育,智能硬件,教育装备"
+  
+  # SEO增强配置
+  [params.seo]
+    site_name = "海南卓炎科技有限责任公司"
+    twitter_card = "summary_large_image"
+    twitter_site = "@zhuoyantech"
+    og_image = "/images/og-image.jpg"
+    og_type = "website"
+    locale = "zh_CN"
+    
+  # 公司结构化数据
+  [params.organization]
+    name = "海南卓炎科技有限责任公司"
+    legal_name = "海南卓炎科技有限责任公司"
+    founding_date = "2020"
+    logo = "/images/logo.png"
+    url = "https://www.zhuoyan.hn.cn/"
+    same_as = [
+      "https://www.zhuoyan.tech/"
+    ]
+    contact_type = "customer service"
+    telephone = "+86-18923719468"
+    email = "axel@long.kim"
+    area_served = "CN"
+    price_range = "$$"
   
   # 社交媒体
   [params.social]
@@ -135,3 +160,12 @@ canonifyURLs = false
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

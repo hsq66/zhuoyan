@@ -3,6 +3,8 @@ title: "联系我们"
 description: "提升英语，轻松掌握！「AI英语提分」助您高效学习，智能搜索，精准匹配学习需求。"
 date: 2024-01-10
 draft: false
+type: "pages"
+layout: "single"
 ---
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 60px;">

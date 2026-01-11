@@ -1,3 +1,45 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backup/
+Disallow: /runtime/
+Disallow: /config/
+Disallow: /core/
+Disallow: /template/
+Disallow: /*.php$
 Disallow: /ad*
+
+# 允许搜索引擎抓取重要资源
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /upload/
+
+# 站点地图
+Sitemap: https://www.zhuoyan.hn.cn/sitemap.xml
+
+# 针对百度爬虫的特殊规则
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 1
+
+# 针对Google爬虫的特殊规则
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# 针对搜狗爬虫
+User-agent: Sogou web spider
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+# 针对360爬虫
+User-agent: 360Spider
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1

@@ -1,0 +1,35 @@
+{{ if not .IsHome }}
+<nav aria-label="breadcrumb" style="background: #f8f8f8; padding: 12px 0; margin-bottom: 20px;">
+  <div class="main">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; font-size: 14px; color: #666;">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
+        <a itemprop="item" href="{{ .Site.BaseURL }}" style="color: #005f4a; text-decoration: none;">
+          <span itemprop="name">首页</span>
+        </a>
+        <meta itemprop="position" content="1" />
+        <span style="margin: 0 8px; color: #999;">›</span>
+      </li>
+      
+      {{ if .Section }}
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
+        <a itemprop="item" href="{{ .Site.BaseURL }}{{ .Section }}/" style="color: #005f4a; text-decoration: none;">
+          <span itemprop="name">{{ .Section | humanize }}</span>
+        </a>
+        <meta itemprop="position" content="2" />
+        {{ if not .IsSection }}
+        <span style="margin: 0 8px; color: #999;">›</span>
+        {{ end }}
+      </li>
+      {{ end }}
+      
+      {{ if not .IsSection }}
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
+        <span itemprop="name" style="color: #333;">{{ .Title }}</span>
+        <meta itemprop="item" content="{{ .Permalink }}" />
+        <meta itemprop="position" content="{{ if .Section }}3{{ else }}2{{ end }}" />
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</nav>
+{{ end }}

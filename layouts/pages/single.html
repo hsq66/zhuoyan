@@ -1,0 +1,75 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+
+<div class="weizhi">
+ <div class="main">
+ <div class="position">您的位置：<a href="{{ .Site.BaseURL }}">首页</a> >> {{ .Title }}</div>
+ </div>
+</div>
+
+<div class="main">
+ <div class="content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+  {{ .Content }}
+ </div>
+</div>
+
+<style>
+/* 联系表单样式优化 */
+.content form {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.content form input,
+.content form select,
+.content form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.content form input:focus,
+.content form select:focus,
+.content form textarea:focus {
+  outline: none;
+  border-color: #005f4a;
+  box-shadow: 0 0 0 3px rgba(0, 95, 74, 0.1);
+}
+
+.content form button {
+  width: 100%;
+  background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.content form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 95, 74, 0.3);
+}
+
+.content form button:active {
+  transform: translateY(0);
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .content > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+}
+</style>
+
+{{ end }}
