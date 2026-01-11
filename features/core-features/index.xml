@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>核心功能 on 海南卓炎科技有限责任公司</title>
+    <link>https://hsq66.github.io/zhuoyan/features/core-features/</link>
+    <description>Recent content in 核心功能 on 海南卓炎科技有限责任公司</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright &amp;copy; 2026 卓炎科技 版权所有</copyright>
+    <atom:link href="https://hsq66.github.io/zhuoyan/features/core-features/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>高性能架构</title>
+      <link>https://hsq66.github.io/zhuoyan/features/core-features/feature-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hsq66.github.io/zhuoyan/features/core-features/feature-1/</guid>
+      <description>&lt;h2 id=&#34;高性能架构&#34;&gt;高性能架构&lt;/h2&gt;&#xA;&lt;p&gt;我们的产品采用现代化的技术栈和架构设计，确保系统的高性能和稳定性。&lt;/p&gt;&#xA;&lt;h3 id=&#34;主要特点&#34;&gt;主要特点&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;快速响应&lt;/strong&gt; - 优化的代码和缓存机制确保快速响应&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;可扩展性&lt;/strong&gt; - 支持水平和垂直扩展&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;高可用性&lt;/strong&gt; - 多节点部署，确保服务持续可用&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;负载均衡&lt;/strong&gt; - 智能的负载均衡策略&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;技术优势&#34;&gt;技术优势&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;异步处理&lt;/strong&gt; - 采用异步处理机制，提升并发能力&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;缓存优化&lt;/strong&gt; - 多级缓存策略，减少数据库压力&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;CDN 加速&lt;/strong&gt; - 静态资源 CDN 分发，提升访问速度&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;数据库优化&lt;/strong&gt; - 索引优化和查询优化&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;性能指标&#34;&gt;性能指标&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;响应时间：&amp;lt; 100ms&lt;/li&gt;&#xA;&lt;li&gt;并发支持：10000+ 用户&lt;/li&gt;&#xA;&lt;li&gt;可用性：99.9%&lt;/li&gt;&#xA;&lt;li&gt;数据安全：多重备份机制&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>安全可靠</title>
+      <link>https://hsq66.github.io/zhuoyan/features/core-features/feature-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hsq66.github.io/zhuoyan/features/core-features/feature-2/</guid>
+      <description>&lt;h2 id=&#34;安全可靠&#34;&gt;安全可靠&lt;/h2&gt;&#xA;&lt;p&gt;我们将安全放在首位，提供企业级的安全保障和数据保护机制。&lt;/p&gt;&#xA;&lt;h3 id=&#34;安全特性&#34;&gt;安全特性&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;数据加密&lt;/strong&gt; - 传输和存储数据全程加密&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;访问控制&lt;/strong&gt; - 细粒度的权限管理系统&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;安全审计&lt;/strong&gt; - 完整的操作日志和审计追踪&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;防护机制&lt;/strong&gt; - 多层防护，抵御各类攻击&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;数据保护&#34;&gt;数据保护&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;备份策略&lt;/strong&gt; - 自动备份，支持快速恢复&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;容灾方案&lt;/strong&gt; - 异地容灾，确保数据安全&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;隐私保护&lt;/strong&gt; - 符合数据保护法规要求&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;加密存储&lt;/strong&gt; - 敏感数据加密存储&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;合规认证&#34;&gt;合规认证&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ISO 27001 信息安全管理体系认证&lt;/li&gt;&#xA;&lt;li&gt;等保三级认证&lt;/li&gt;&#xA;&lt;li&gt;GDPR 合规&lt;/li&gt;&#xA;&lt;li&gt;SOC 2 Type II 认证&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

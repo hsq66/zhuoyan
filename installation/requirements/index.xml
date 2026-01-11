@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>系统要求 on 海南卓炎科技有限责任公司</title>
+    <link>https://hsq66.github.io/zhuoyan/installation/requirements/</link>
+    <description>Recent content in 系统要求 on 海南卓炎科技有限责任公司</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright &amp;copy; 2026 卓炎科技 版权所有</copyright>
+    <atom:link href="https://hsq66.github.io/zhuoyan/installation/requirements/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>系统要求</title>
+      <link>https://hsq66.github.io/zhuoyan/installation/requirements/system-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hsq66.github.io/zhuoyan/installation/requirements/system-requirements/</guid>
+      <description>&lt;h2 id=&#34;系统要求&#34;&gt;系统要求&lt;/h2&gt;&#xA;&lt;h3 id=&#34;硬件要求&#34;&gt;硬件要求&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;最低配置：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CPU: 2 核心&lt;/li&gt;&#xA;&lt;li&gt;内存: 4GB RAM&lt;/li&gt;&#xA;&lt;li&gt;硬盘: 20GB 可用空间&lt;/li&gt;&#xA;&lt;li&gt;网络: 稳定的互联网连接&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;推荐配置：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CPU: 4 核心或更高&lt;/li&gt;&#xA;&lt;li&gt;内存: 8GB RAM 或更高&lt;/li&gt;&#xA;&lt;li&gt;硬盘: 50GB SSD&lt;/li&gt;&#xA;&lt;li&gt;网络: 高速互联网连接&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;软件要求&#34;&gt;软件要求&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;操作系统：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ubuntu 20.04 LTS 或更高版本&lt;/li&gt;&#xA;&lt;li&gt;CentOS 7/8&lt;/li&gt;&#xA;&lt;li&gt;Windows Server 2016 或更高版本&lt;/li&gt;&#xA;&lt;li&gt;macOS 10.15 或更高版本&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;运行环境：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Node.js 16.x 或更高版本&lt;/li&gt;&#xA;&lt;li&gt;Python 3.8 或更高版本&lt;/li&gt;&#xA;&lt;li&gt;Docker 20.10 或更高版本（可选）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;数据库：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;MySQL 5.7 或更高版本&lt;/li&gt;&#xA;&lt;li&gt;PostgreSQL 12 或更高版本&lt;/li&gt;&#xA;&lt;li&gt;MongoDB 4.4 或更高版本&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;浏览器支持&#34;&gt;浏览器支持&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Chrome 90+&lt;/li&gt;&#xA;&lt;li&gt;Firefox 88+&lt;/li&gt;&#xA;&lt;li&gt;Safari 14+&lt;/li&gt;&#xA;&lt;li&gt;Edge 90+&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;网络要求&#34;&gt;网络要求&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;开放端口：80, 443, 3000&lt;/li&gt;&#xA;&lt;li&gt;支持 WebSocket 连接&lt;/li&gt;&#xA;&lt;li&gt;允许访问外部 API（如需要）&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
