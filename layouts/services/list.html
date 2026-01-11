@@ -29,28 +29,53 @@
      <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
     </a>
     {{ else }}
-    <a href="{{ .RelPermalink }}">
-     <img src="{{ "images/index_about.jpg" | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+    <a href="{{ .RelPermalink }}" style="display: flex; align-items: center; justify-content: center; height: 100%; background: linear-gradient(135deg, #005f4a 0%, #048a6c 100%);">
+     <span style="font-size: 72px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">
+      {{ if in .Title "鼎英语" }}🎓
+      {{ else if in .Title "智慧学习手机" }}📱
+      {{ else if in .Title "OLED" }}💡
+      {{ else if in .Title "卫星" }}🛰️
+      {{ else if in .Title "数字化" }}💼
+      {{ else if in .Title "软件" }}💻
+      {{ else }}🎯{{ end }}
+     </span>
     </a>
     {{ end }}
-    <div style="position: absolute; top: 15px; right: 15px; background: #005f4a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px;">
-     {{ if .Params.badge }}{{ .Params.badge }}{{ else }}核心产品{{ end }}
+    <div style="position: absolute; top: 15px; right: 15px; background: rgba(0,95,74,0.9); backdrop-filter: blur(10px); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 500;">
+     {{ if .Params.badge }}{{ .Params.badge }}
+     {{ else if in .Title "鼎英语" }}AI智能学习
+     {{ else if in .Title "智慧学习手机" }}智能硬件
+     {{ else if in .Title "OLED" }}健康照明
+     {{ else if in .Title "卫星" }}通信服务
+     {{ else if in .Title "数字化" }}咨询服务
+     {{ else if in .Title "软件" }}软件开发
+     {{ else }}核心产品{{ end }}
     </div>
    </div>
    <div class="service-content" style="padding: 25px;">
-    <h3 style="font-size: 22px; color: #005f4a; margin-bottom: 12px; font-weight: bold;">
-     <a href="{{ .RelPermalink }}" style="color: #005f4a;">{{ .Title }}</a>
+    <h3 style="font-size: 20px; color: #005f4a; margin-bottom: 12px; font-weight: bold; line-height: 1.4;">
+     <a href="{{ .RelPermalink }}" style="color: #005f4a; text-decoration: none;">
+      {{ if in .Title "_" }}
+        {{ index (split .Title "_") 0 }}
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+     </a>
     </h3>
-    <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 14px;">
-     {{ .Summary | truncate 100 }}
+    <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 14px; min-height: 60px;">
+     {{ if .Description }}
+       {{ .Description | truncate 80 }}
+     {{ else }}
+       {{ .Summary | truncate 80 }}
+     {{ end }}
     </p>
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
-     <a href="{{ .RelPermalink }}" style="color: #005f4a; font-weight: bold; text-decoration: none; transition: all 0.3s;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid #f0f0f0;">
+     <a href="{{ .RelPermalink }}" style="color: #005f4a; font-weight: bold; text-decoration: none; transition: all 0.3s; font-size: 14px;">
       了解详情 →
      </a>
      {{ if .Params.users }}
      <span style="color: #999; font-size: 12px;">
-      <i class="icon-users"></i> {{ .Params.users }}
+      👥 {{ .Params.users }}
      </span>
      {{ end }}
     </div>
@@ -129,15 +154,23 @@
 </div>
 
 <style>
+.service-card {
+ position: relative;
+}
 .service-card:hover {
  transform: translateY(-8px);
- box-shadow: 0 12px 32px rgba(0,95,74,0.2);
+ box-shadow: 0 12px 32px rgba(0,95,74,0.2) !important;
 }
 .service-card:hover .service-image img {
  transform: scale(1.1);
 }
 .service-card h3 a:hover {
- color: #048a6c;
+ color: #048a6c !important;
+}
+.service-content a:hover {
+ color: #048a6c !important;
+ transform: translateX(5px);
+ display: inline-block;
 }
 </style>
 
